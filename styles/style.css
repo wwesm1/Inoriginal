@@ -44,4 +44,20 @@ a {
   color: inherit;
 }
 
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #000;
+}
+.nav-logo .logo-icon {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.5s ease-in-out;
+}
+.nav-logo:hover .logo-icon {
+  transform: rotate(360deg);
+}
+
 /*# sourceMappingURL=style.css.map */
