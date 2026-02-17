@@ -40,7 +40,7 @@ body {
       font-size: $fs-18;
       font-weight: $fw-600;
       position: relative;
-      left: -5rem;
+      left: -2rem;
       padding-bottom: 12px;
       transition: all 0.3s ease;
     }
@@ -76,17 +76,14 @@ body {
 
     .items {
       @include flex-center;
-      gap: 30px;
+      gap: 20px;
 
       .nav_search {
         border-right: 1px solid $cool-gray;
         padding: 0 35px;
-        height: 30px;
 
         .nav__search {
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          @include flex-center;
           width: 40px;
           height: 40px;
           border: none;
@@ -100,6 +97,104 @@ body {
         .nav__search:hover {
           background-color: rgba(255, 255, 255, 0.1);
           color: #ffffff;
+        }
+      }
+
+      .nav__choosen {
+        @include flex-center;
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-radius: 10px;
+        background-color: transparent;
+        color: #8d8e94;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .nav__choosen:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+      }
+
+      .nav__library {
+        @include flex-center;
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-radius: 10px;
+        background-color: transparent;
+        color: #8d8e94;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .nav__library:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+      }
+
+      .sign__in {
+        @include flex-center;
+        padding: 11px 23px;
+        border-radius: 12px;
+        gap: 8px;
+        color: $white;
+        background: #047AE0;
+        background: linear-gradient(90deg, rgba(4, 122, 224, 1) 49%, rgba(44, 157, 255, 1) 100%);
+        transition: all 0.3s ease;
+
+        &:hover {
+          box-shadow:
+            0 0px 20px rgba(4, 122, 224, 0.8),
+            0 2px 30px rgba(0, 0, 0, .25);
+        }
+
+        .sign__in-text {
+          font-weight: $fw-600;
+          font-size: $fs-16;
+        }
+      }
+    }
+  }
+
+  .background-image-troll {
+    @include flex-space-between;
+    background: url("../assets/images/trolls.png") no-repeat 50% 50%;
+    background-size: cover;
+    padding: 45px;
+    border-radius: 12px;
+
+    .follow__title {
+      color: $white;
+      font-size: $fs-22;
+      font-weight: $fw-600;
+      margin-bottom: 0.7rem;
+    }
+
+    .continue {
+      color: $white;
+      font-size: $fs-18;
+      font-weight: $fw-500;
+    }
+
+    .follow__btns {
+      @include flex-center;
+      gap: 30px;
+
+      .follow__btn {
+        @include flex-center;
+        gap: 10px;
+        color: $white;
+        font-weight: $fw-600;
+        border: 1px solid $white;
+        padding: 10px 15px;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: #2d303b;
+          border: 1px solid #2d303b;
         }
       }
     }
