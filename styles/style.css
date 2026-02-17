@@ -109,60 +109,6 @@ body .navbar .items .nav_search {
   padding: 0 35px;
 }
 
-/* Menyu konteyneri */
-.nav__items {
-  display: flex;
-  list-style: none;
-  gap: 25px; /* Elementlar orasidagi masofa */
-  padding: 0;
-  margin: 0;
-  align-items: center;
-}
-
-/* Har bir menyu elementi */
-.nav__items li a {
-  text-decoration: none;
-  color: #ffffff; /* Oq rang */
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  position: relative; /* ::after uchun asos */
-  padding: 10px 0; /* Chiziq va matn orasidagi joy */
-  transition: color 0.3s ease;
-}
-
-/* Hover bo'lganda matn rangi biroz yorqinlashishi mumkin */
-.nav__items li a:hover {
-  color: #0085FF;
-}
-
-/* Pastki chiziq (Pseudoelement) */
-.nav__items li a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0; /* Havolaning eng pastki qismida turadi */
-  width: 100%;
-  height: 3px; /* Chiziq qalinligi */
-  background-color: #0085FF; /* Ko'k chiziq */
-  border-radius: 10px; /* Chiziq chetlari yumaloq */
-  /* Animatsiya sozlamalari */
-  transform: scaleX(0); /* Boshida ko'rinmaydi (kengligi 0) */
-  transform-origin: center; /* Markazdan kengayadi */
-  transition: transform 0.3s ease;
-}
-
-/* Sichqoncha ustiga kelganda chiziqni ko'rsatish */
-.nav__items li a:hover::after {
-  transform: scaleX(1); /* To'liq kenglikka chiqadi */
-}
-
-/* Hozirgi sahifa (Active) uchun doimiy chiziq */
-/* HTML da kerakli havolaga class="active" qo'shib qo'ying */
-.nav__items li a.active::after {
-  transform: scaleX(1);
-}
-
 .hero {
   height: 80vh;
   position: relative;
