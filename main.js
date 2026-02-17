@@ -13,13 +13,27 @@ function goToSlide(index) {
   current = index;
 }
 
-// Auto rotate (normal loop 0 → 1 → 2 → 0)
 setInterval(() => {
-  current = (current + 1) % 3;   // 🔥 ONLY 3 slides
+  current = (current + 1) % 3;  
   goToSlide(current);
 }, 4000);
 
 
+<script>
+  const row = document.querySelector('.cards-scroll');
+  const btnLeft = document.querySelector('.cards-nav--left');
+  const btnRight = document.querySelector('.cards-nav--right');
+
+  const scrollAmount = 750; // adjust if needed
+
+  btnRight.addEventListener('click', () => {
+    row.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+
+  btnLeft.addEventListener('click', () => {
+    row.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+</script>
 
 
 
