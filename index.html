@@ -72,7 +72,7 @@
     </nav>
   </header>
   <main>
-    <section class="hero container">
+    <section class="hero">
       <div class="hero__slider">
         <div class="hero__slide active">
           <div class="hero__bg" style="background-image:url('assets/images/maninhero.webp')"></div>
@@ -101,9 +101,15 @@
             <h3 class="hero__subtitle"></h3>
           </div>
         </div>
+         
         <div class="hero__slide">
-          <div class="hero__bg hero__bg--telegram" style="background-image:url('assets/images/teleg-hero.webp')"></div>
-        </div>
+  <div class="hero__bg hero__bg--telegram"
+       style="background-image:url('assets/images/teleg-hero.webp')">
+  </div>
+  <div class="hero__overlay"></div>
+  <div class="hero__content"></div>
+</div>
+
 
         <div class="hero__slide">
           <div class="hero__bg" style="background-image:url('assets/images/cartoon\ hero.webp')"></div>
@@ -124,8 +130,6 @@
           </div>
         </div>
 
-        <button class="hero__arrow hero__arrow--left">&#10094;</button>
-        <button class="hero__arrow hero__arrow--right">&#10095;</button>
 
         <div class="hero__dots">
           <span class="hero__dot active"></span>
