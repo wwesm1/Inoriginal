@@ -52,10 +52,9 @@ button {
 }
 
 .container {
-  width: 90%;
   max-width: 1350px;
   margin: 0 auto;
-  padding: 25px 20px;
+  padding: 25px 0;
 }
 
 body {
@@ -149,12 +148,6 @@ body .navbar .items .nav_search .nav__search {
 body .navbar .items .nav_search .nav__search:hover {
   background-color: rgba(255, 255, 255, 0.1);
   color: #ffffff;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 .hero {
