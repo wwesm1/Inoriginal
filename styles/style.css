@@ -96,7 +96,7 @@ body .navbar .nav__items li a {
   font-size: 18px;
   font-weight: 600;
   position: relative;
-  left: -5rem;
+  left: -2rem;
   padding-bottom: 12px;
   transition: all 0.3s ease;
 }
@@ -125,12 +125,11 @@ body .navbar .items {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
 }
 body .navbar .items .nav_search {
   border-right: 1px solid #8d8e94;
   padding: 0 35px;
-  height: 30px;
 }
 body .navbar .items .nav_search .nav__search {
   display: flex;
@@ -148,6 +147,101 @@ body .navbar .items .nav_search .nav__search {
 body .navbar .items .nav_search .nav__search:hover {
   background-color: rgba(255, 255, 255, 0.1);
   color: #ffffff;
+}
+body .navbar .items .nav__choosen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #8d8e94;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+body .navbar .items .nav__choosen:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+body .navbar .items .nav__library {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #8d8e94;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+body .navbar .items .nav__library:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+body .navbar .items .sign__in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 23px;
+  border-radius: 12px;
+  gap: 8px;
+  color: #fff;
+  background: #047AE0;
+  background: linear-gradient(90deg, rgb(4, 122, 224) 49%, rgb(44, 157, 255) 100%);
+  transition: all 0.3s ease;
+}
+body .navbar .items .sign__in:hover {
+  box-shadow: 0 0px 20px rgba(4, 122, 224, 0.8), 0 2px 30px rgba(0, 0, 0, 0.25);
+}
+body .navbar .items .sign__in .sign__in-text {
+  font-weight: 600;
+  font-size: 16px;
+}
+body .background-image-troll {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: url("../assets/images/trolls.png") no-repeat 50% 50%;
+  background-size: cover;
+  padding: 45px;
+  border-radius: 12px;
+}
+body .background-image-troll .follow__title {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+body .background-image-troll .continue {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+body .background-image-troll .follow__btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+body .background-image-troll .follow__btns .follow__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #fff;
+  font-weight: 600;
+  border: 1px solid #fff;
+  padding: 10px 15px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+body .background-image-troll .follow__btns .follow__btn:hover {
+  background-color: #2d303b;
+  border: 1px solid #2d303b;
 }
 
 .hero {
