@@ -45,6 +45,12 @@ a {
   color: inherit;
 }
 
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
 .container {
   width: 90%;
   max-width: 1350px;
@@ -55,25 +61,62 @@ a {
 body {
   background-color: #1a1d29;
 }
-
-.nav-logo {
+body .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .navbar .nav-logo {
   display: flex;
   align-items: center;
   gap: 10px;
   text-decoration: none;
   color: #000;
 }
-.nav-logo .logo-text {
+body .navbar .nav-logo .logo-text {
   color: #fff;
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 1px;
 }
-.nav-logo .logo-icon {
+body .navbar .nav-logo .logo-icon {
   transition: transform 0.5s ease-in-out;
 }
-.nav-logo:hover .logo-icon {
+body .navbar .nav-logo:hover .logo-icon {
   transform: rotate(360deg);
+}
+body .navbar .nav__items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-left: -10rem;
+}
+body .navbar .nav__items a {
+  color: #8d8e94;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+body .navbar .items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+body .navbar .items .nav_search {
+  border-right: 1px solid #8d8e94;
+  padding: 0 35px;
+}
+body .navbar .items .nav_search .nav__search {
+  background-color: transparent;
+}
+body .navbar .items .nav_search .nav__search .nav__search:hover {
+  background-color: rgba(17, 170, 17, 0.8666666667);
+}
+body .navbar .items .nav_search .nav__search .nav__search:hover svg circle,
+body .navbar .items .nav_search .nav__search .nav__search:hover svg circle {
+  fill: red;
 }
 
 .hero {
