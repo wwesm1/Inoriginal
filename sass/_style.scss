@@ -9,9 +9,14 @@ body {
   text-decoration: none;
   color: $black; 
 
+  .logo-text {
+    color: $white;
+    font-size: $fs-24;
+    font-weight: $fw-700;
+    letter-spacing: 1px;
+  }
+
   .logo-icon {
-    width: 30px;
-    height: 30px;
     transition: transform 0.5s ease-in-out;
   }
 

@@ -20,6 +20,7 @@ html, body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  font-family: "Open Sans";
 }
 
 img, picture, video, canvas, svg {
@@ -48,7 +49,7 @@ a {
   width: 90%;
   max-width: 1350px;
   margin: 0 auto;
-  padding: 15px 0;
+  padding: 25px 0;
 }
 
 body {
@@ -62,9 +63,13 @@ body {
   text-decoration: none;
   color: #000;
 }
+.nav-logo .logo-text {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
 .nav-logo .logo-icon {
-  width: 30px;
-  height: 30px;
   transition: transform 0.5s ease-in-out;
 }
 .nav-logo:hover .logo-icon {
