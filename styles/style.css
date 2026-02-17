@@ -1,18 +1,265 @@
-/* Error: This module and the new module both define a variable named "$fs-12".
- *   ,
- * 1 | @use 'variables' as *;
- *   | ^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   sass\_hero.scss 1:1  @import
- *   sass\main.scss 8:9   root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: This module and the new module both define a variable named \"$fs-12\".\a   \2577 \a 1 \2502  @use 'variables' as *;\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   sass\\_hero.scss 1:1  @import\a   sass\\main.scss 8:9   root stylesheet";
+@font-face {
+  font-family: "Open Sans";
+  src: url("../assets/fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Open Sans";
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 25px 0;
+}
+
+body {
+  background-color: #1a1d29;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #000;
+}
+.nav-logo .logo-text {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.nav-logo .logo-icon {
+  transition: transform 0.5s ease-in-out;
+}
+.nav-logo:hover .logo-icon {
+  transform: rotate(360deg);
+}
+
+.hero {
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+}
+.hero__slider {
+  height: 100%;
+  position: relative;
+}
+.hero__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+.hero__slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center right;
+  z-index: 1;
+}
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 20%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+  z-index: 2;
+}
+.hero__content {
+  position: relative;
+  z-index: 3;
+  color: white;
+  padding-left: 10%;
+  max-width: 600px;
+}
+.hero__title {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.hero__title--accent {
+  color: #ffcc00;
+}
+.hero__title--script {
+  font-family: "Cursive", sans-serif;
+  text-transform: none;
+}
+.hero__description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+.hero__meta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.hero__badge {
+  background: #00cc66;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.hero__info {
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+.hero__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+  z-index: 4;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+.hero__arrow:hover {
+  opacity: 1;
+}
+.hero__arrow--left {
+  left: 20px;
+}
+.hero__arrow--right {
+  right: 20px;
+}
+.hero__dots {
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+  display: flex;
+  gap: 8px;
+  z-index: 4;
+}
+.hero__dot {
+  width: 10px;
+  height: 10px;
+  background: white;
+  opacity: 0.3;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.hero__dot.active {
+  opacity: 1;
+}
+
+.hero {
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+.hero__slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.hero__slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center right;
+  z-index: 1;
+}
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 60%);
+  z-index: 2;
+}
+.hero__content {
+  position: relative;
+  z-index: 3;
+  padding: 0 60px;
+  max-width: 550px;
+  color: white;
+  text-align: left;
+}
+.hero__description {
+  margin: 20px 0;
+  font-size: 16px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.9);
+}
+.hero__meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.hero__badge {
+  background: #00cc66;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+.hero__badge img {
+  width: 16px;
+}
+
+/*# sourceMappingURL=style.css.map */
