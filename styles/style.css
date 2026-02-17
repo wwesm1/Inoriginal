@@ -1,74 +1,18 @@
-@font-face {
-  font-family: "Open Sans";
-  src: url("../assets/fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+/* Error: This module and the new module both define a variable named "$fs-12".
+ *   ,
+ * 1 | @use 'variables' as *;
+ *   | ^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   sass\_hero.scss 1:1  @import
+ *   sass\main.scss 8:9   root stylesheet */
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  height: 100%;
-}
-
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-img, picture, video, canvas, svg {
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
   display: block;
-  max-width: 100%;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: This module and the new module both define a variable named \"$fs-12\".\a   \2577 \a 1 \2502  @use 'variables' as *;\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   sass\\_hero.scss 1:1  @import\a   sass\\main.scss 8:9   root stylesheet";
 }
-
-input, button, textarea, select {
-  font: inherit;
-}
-
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
-
-ul, ol {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.container {
-  width: 90%;
-  max-width: 1350px;
-  margin: 0 auto;
-  padding: 15px 0;
-}
-
-body {
-  background-color: #1a1d29;
-}
-
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: #000;
-}
-.nav-logo .logo-icon {
-  width: 30px;
-  height: 30px;
-  transition: transform 0.5s ease-in-out;
-}
-.nav-logo:hover .logo-icon {
-  transform: rotate(360deg);
-}
-
-/*# sourceMappingURL=style.css.map */
