@@ -49,19 +49,6 @@ body {
       .nav_search {
         border-right: 1px solid $cool-gray;
         padding: 0 35px;
-
-        .nav__search {
-          background-color: transparent;
-
-          .nav__search:hover {
-            background-color: #1a1d;
-          }
-
-          .nav__search:hover svg circle,
-          .nav__search:hover svg circle {
-            fill: red;
-          }
-        }
       }
     }
   }
