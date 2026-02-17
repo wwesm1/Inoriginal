@@ -82,10 +82,44 @@ button {
   box-shadow: 0 0px 20px rgba(4, 122, 224, 0.8), 0 2px 30px rgba(0, 0, 0, 0.25);
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1d29;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, rgb(4, 122, 224) 49%, rgb(44, 157, 255) 100%);
+  border-radius: 10px;
+  border: 2px solid #1a1d29;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, rgb(44, 157, 255) 0%, rgb(80, 180, 255) 100%);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(4, 122, 224) #1a1d29;
+}
+
 .container {
   max-width: 1350px;
   margin: 0 auto;
   padding: 25px 0;
+}
+
+header {
+  position: relative;
+  z-index: 9999;
+}
+
+.follow__btn {
+  position: relative;
+  z-index: 9999;
 }
 
 body {
