@@ -105,3 +105,30 @@
     &--right { right: 20px; }
   }
 }
+.hero {
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+  }
+
+  &__badge {
+    background: #00b341;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: inline-flex;  
+    align-items: center;
+    justify-content: center;
+    width: auto;           
+  }
+
+  &__info {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+}
