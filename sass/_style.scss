@@ -7,14 +7,14 @@ body {
     .nav-logo {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 5px;
       text-decoration: none;
       color: $black;
 
       .logo-text {
-        color: #fff;
-        font-size: $fs-24;
-        font-weight: $fw-700;
+        color: $white;
+        font-size: $fs-26;
+        font-weight: $fw-800;
         letter-spacing: 1px;
       }
 
@@ -31,17 +31,47 @@ body {
 
     .nav__items {
       @include flex-center;
-      gap: 20px;
-      margin-left: -10rem;
+      gap: 25px;
+      background-color: $deep-gunmetal;
+    }
 
-      a {
-        color: $cool-gray;
-        font-weight: $fw-600;
-        font-size: $fs-18;
-        letter-spacing: 0.5px;
-      }
+    .nav__items li a {
+      color: $cool-gray;
+      font-size: $fs-18;
+      font-weight: $fw-600;
+      position: relative;
+      left: -5rem;
+      padding-bottom: 12px;
+      transition: all 0.3s ease;
+    }
 
-      
+    .nav__items li a:hover,
+    .nav__items li a.active {
+      color: $white;
+    }
+
+    .nav__items li a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 104%;
+      height: 1.7px;
+
+      background: linear-gradient(90deg,
+          rgba(0, 133, 255, 0) 0%,
+          rgba(0, 133, 255, 1) 50%,
+          rgba(0, 133, 255, 0) 100%);
+      box-shadow: 0px 2px 8px rgba(0, 133, 255, 0.5),
+        0px 4px 12px rgba(0, 133, 255, 0.2);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.3s ease-out;
+    }
+
+    .nav__items li a:hover::after,
+    .nav__items li a.active::after {
+      transform: scaleX(1);
     }
 
     .items {
@@ -51,8 +81,27 @@ body {
       .nav_search {
         border-right: 1px solid $cool-gray;
         padding: 0 35px;
+        height: 30px;
+
+        .nav__search {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          border: none;
+          border-radius: 10px;
+          background-color: transparent;
+          color: #8d8e94;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+
+        .nav__search:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+          color: #ffffff;
+        }
       }
     }
   }
 }
-
