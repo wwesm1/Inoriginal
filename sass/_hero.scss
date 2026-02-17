@@ -1,197 +1,72 @@
 
-.hero {
-  height: 80vh; 
-  position: relative;
-  overflow: hidden;
-  font-family: 'Inter', sans-serif;
-
-  &__slider {
-    height: 100%;
-    position: relative;
-  }
-
-  &__slide {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out;
-    display: flex;
-    align-items: center; 
-
-    &.active {
-      opacity: 1;
-      z-index: 2;
-    }
-  }
-
-  &__bg {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center right; 
-    z-index: 1;
-  }
-
-  &__overlay {
-    position: absolute;
-    inset: 0;
-
-    background: linear-gradient(to right, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.4) 50%, transparent 100%);
-    z-index: 2;
-  }
-
-  &__content {
-    position: relative;
-    z-index: 3;
-    color: white;
-    padding-left: 10%;
-    max-width: 600px;
-  }
-
-  &__title {
-    font-size: 4rem;
-    font-weight: 900;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    
-    &--accent { color: #ffcc00; }
-    &--script { font-family: 'Cursive', sans-serif; text-transform: none; }
-  }
-
-  &__description {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    margin-bottom: 2rem;
-    color: rgba(255, 255, 255, 0.8);
-  }
-
-  &__meta {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
-  }
-
-  &__badge {
-    background: #00cc66; 
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 0.9rem;
-  }
-
-  &__info {
-    font-size: 1rem;
-    font-weight: 500;
-    opacity: 0.9;
-  }
-
-  &__arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    color: white;
-    font-size: 3rem;
-    cursor: pointer;
-    z-index: 4;
-    opacity: 0.5;
-    transition: opacity 0.3s;
-
-    &:hover { opacity: 1; }
-    &--left { left: 20px; }
-    &--right { right: 20px; }
-  }
-
-  &__dots {
-    position: absolute;
-    bottom: 30px;
-    right: 50px; 
-    display: flex;
-    gap: 8px;
-    z-index: 4;
-  }
-
-  &__dot {
-    width: 10px;
-    height: 10px;
-    background: white;
-    opacity: 0.3;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: opacity 0.3s;
-
-    &.active { opacity: 1; }
-  }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
+
 .hero {
-  height: 500px;
+  width: 100%;
+  height: 450px;
   position: relative;
   overflow: hidden;
+  border-radius: 15px; 
+  background: #000;
+}
 
-  &__slide {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.5s ease;
+.hero__slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
 
-    &.active {
-      opacity: 1;
-      z-index: 2;
-    }
-  }
+.hero__slide.active {
+  opacity: 1;
+  z-index: 2;
+}
 
-  &__bg {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center right; 
-    z-index: 1;
-  }
+.hero__bg--telegram {
+  background-color: #000 !important; 
+}
 
-  &__overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%);
-    z-index: 2;
-  }
+.hero__content--telegram {
+  max-width: 100% !important;
+  width: 100%;
+}
 
-  &__content {
-    position: relative;
-    z-index: 3;
-    padding: 0 60px;
-    max-width: 550px; 
-    color: white;
-    text-align: left;
-  }
+.telegram-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+}
 
-  &__description {
-    margin: 20px 0;
-    font-size: 16px;
-    line-height: 1.4;
-    color: rgba(255, 255, 255, 0.9);
-  }
+.telegram-text {
+  font-size: 2.8rem;
+  color: #2ea6da;
+  font-weight: 700;
+  max-width: 500px;
+  line-height: 1.2;
+}
 
-  &__meta {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
-  }
+.telegram-text .underline {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
 
-  &__badge {
-    background: #00cc66; 
-    padding: 5px 12px;
-    border-radius: 8px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 14px;
+.telegram-logo {
+  width: 180px;
+  filter: drop-shadow(0 0 15px rgba(46, 166, 218, 0.4));
+}
 
-    img { width: 16px; } 
-  }
+.hero__badge {
+  background: #00cc66;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
 }
