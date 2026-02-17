@@ -424,11 +424,18 @@ body .background-image-troll .follow__btns .follow__btn:hover {
   color: white;
 }
 
+.cards-container {
+  position: relative;
+}
+
 .cards-row {
   display: flex;
   gap: 22px;
-  overflow: visible;
+  overflow-x: visible;
+  overflow-y: visible;
+  scroll-behavior: smooth;
   padding: 25px 0;
+  scrollbar-width: none;
 }
 .cards-row::-webkit-scrollbar {
   display: none;
@@ -452,7 +459,7 @@ body .background-image-troll .follow__btns .follow__btn:hover {
   opacity: 0;
   transform: translateX(-5px);
   transition: all 0.3s ease;
-  font-size: 35px;
+  font-size: 28px;
 }
 
 .cards-header:hover .cards-arrow {
@@ -460,8 +467,20 @@ body .background-image-troll .follow__btns .follow__btn:hover {
   transform: translateX(0);
 }
 
+.cards-header:hover .cards-title {
+  color: #ffffff;
+}
+
+.cards-header:hover .cards-arrow {
+  color: #ffffff;
+}
+
+.cards-header:hover {
+  opacity: 0.9;
+}
+
 .card-item {
-  flex: 0 0 220px;
+  flex: 0 0 225px;
   cursor: pointer;
 }
 .card-item:hover .card-inner {
@@ -526,8 +545,8 @@ body .background-image-troll .follow__btns .follow__btn:hover {
 
 .card-bookmark {
   position: absolute;
-  top: 10px;
-  right: 2px;
+  top: 14px;
+  right: 14px;
   opacity: 0;
   transform: translateY(-6px);
   transition: all 0.3s ease;
@@ -535,7 +554,7 @@ body .background-image-troll .follow__btns .follow__btn:hover {
   border-radius: 10px;
   padding: 8px;
   color: #fff;
-  font-size: 7px;
+  font-size: 14px;
 }
 
 .card-overlay {
