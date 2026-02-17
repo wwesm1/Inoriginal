@@ -1,29 +1,15 @@
-@font-face {
-  font-family: "Open Sans";
-  src: url("../assets/fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+/* Error: This module and the new module both define a variable named "$fs-12".
+ *   ,
+ * 1 | @use 'variables' as *;
+ *   | ^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   sass\_hero.scss 1:1  @import
+ *   sass\main.scss 8:9   root stylesheet */
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  height: 100%;
-}
-
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Open Sans";
-}
-
-img, picture, video, canvas, svg {
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
   display: block;
   max-width: 100%;
 }
