@@ -1,4 +1,4 @@
-/* Layout Container */
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -10,7 +10,7 @@
   height: 450px;
   position: relative;
   overflow: hidden;
-  border-radius: 15px; /* Creates the rounded look from your photos */
+  border-radius: 15px; 
   background: #000;
 }
 
@@ -29,9 +29,8 @@
   z-index: 2;
 }
 
-/* Telegram Slide Styling - Fixes the "Small Box" issue */
 .hero__bg--telegram {
-  background-color: #000 !important; /* Forces solid black background */
+  background-color: #000 !important; 
 }
 
 .hero__content--telegram {
@@ -64,7 +63,6 @@
   filter: drop-shadow(0 0 15px rgba(46, 166, 218, 0.4));
 }
 
-/* Badge styling to match photos */
 .hero__badge {
   background: #00cc66;
   padding: 4px 12px;
