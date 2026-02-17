@@ -182,5 +182,16 @@
     flex-wrap: wrap;
   }
 
-  
+  &__badge {
+    background: #00cc66; 
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+
+    img { width: 16px; } 
+  }
 }
