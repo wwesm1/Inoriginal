@@ -199,4 +199,31 @@ body {
       }
     }
   }
+
+  .watch__movies {
+    width: 100%;
+    background: #0F1321;
+    background: linear-gradient(90deg, rgba(15, 19, 33, 1) 0%, rgba(14, 27, 46, 1) 50%, rgba(15, 19, 33, 1) 100%);
+    padding: 30px 0;
+
+    .container {
+      @include flex-space-between;
+
+      .movies-image {
+        width: 390px;
+      }
+
+      .watch__movies-title {
+        @include flex-column-center;
+        gap: 30px;
+
+        .watch__movies-description {
+          color: $white;
+          font-size: $fs-24;
+          font-weight: $fw-600;
+          text-align: center;
+        }
+      }
+    }
+  }
 }

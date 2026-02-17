@@ -4,7 +4,9 @@
   font-weight: normal;
   font-style: normal;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -13,7 +15,8 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -23,20 +26,34 @@ body {
   font-family: "Open Sans";
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -49,6 +66,20 @@ button {
   cursor: pointer;
   background-color: transparent;
   border: none;
+}
+
+.blue-button {
+  padding: 20px 60px;
+  border-radius: 12px;
+  gap: 8px;
+  font-weight: 600;
+  color: #fff;
+  background: #047AE0;
+  background: linear-gradient(90deg, rgb(4, 122, 224) 49%, rgb(44, 157, 255) 100%);
+  transition: all 0.3s ease;
+}
+.blue-button:hover {
+  box-shadow: 0 0px 20px rgba(4, 122, 224, 0.8), 0 2px 30px rgba(0, 0, 0, 0.25);
 }
 
 .container {
@@ -243,6 +274,33 @@ body .background-image-troll .follow__btns .follow__btn:hover {
   background-color: #2d303b;
   border: 1px solid #2d303b;
 }
+body .watch__movies {
+  width: 100%;
+  background: #0F1321;
+  background: linear-gradient(90deg, rgb(15, 19, 33) 0%, rgb(14, 27, 46) 50%, rgb(15, 19, 33) 100%);
+  padding: 30px 0;
+}
+body .watch__movies .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .watch__movies .container .movies-image {
+  width: 390px;
+}
+body .watch__movies .container .watch__movies-title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+body .watch__movies .container .watch__movies-title .watch__movies-description {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
 
 .hero {
   max-width: 1350px;
@@ -348,7 +406,6 @@ body .background-image-troll .follow__btns .follow__btn:hover {
 }
 .hero__arrow--right {
   right: 20px;
-<<<<<<< HEAD
 }
 
 .hero__meta {
@@ -537,8 +594,6 @@ body .background-image-troll .follow__btns .follow__btn:hover {
   gap: 8px;
   font-size: 12px;
   color: rgba(255, 255, 255, 0.6);
-=======
->>>>>>> 7f47a8a332404e23312bf37ed1598782ab0c5b7a
 }
 
 /*# sourceMappingURL=style.css.map */
