@@ -78,3 +78,27 @@ button {
       0 2px 30px rgba(0, 0, 0, .25);
   }
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1d29;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, rgba(4, 122, 224, 1) 49%, rgba(44, 157, 255, 1) 100%);
+  border-radius: 10px;
+  border: 2px solid #1a1d29;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, rgba(44, 157, 255, 1) 0%, rgba(80, 180, 255, 1) 100%);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(4, 122, 224, 1) #1a1d29;
+}
