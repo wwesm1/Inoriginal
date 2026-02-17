@@ -1,5 +1,5 @@
 body {
-    background-color: $deep-gunmetal;
+    background-color: #1a1d29;
 }
 
 .nav-logo {
@@ -7,12 +7,12 @@ body {
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  color: $black; 
+  color: #000; 
 
   .logo-text {
-    color: $white;
-    font-size: $fs-24;
-    font-weight: $fw-700;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
     letter-spacing: 1px;
   }
 
