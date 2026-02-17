@@ -1,8 +1,5 @@
-@use 'variables' as *;
-@use 'mixin' as *;
-
-@use 'variables' as *;
-@use 'mixin' as *;
+@import 'variables';
+@import 'mixin';
 
 .hero {
   height: 80vh; 
