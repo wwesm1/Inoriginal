@@ -4,11 +4,8 @@
   height: 450px;
   position: relative;
   
-  // 1. ROUNDING & CLIPPING
   border-radius: 16px; 
   overflow: hidden; 
-  
-  // Forces Safari to respect the rounded corners
   -webkit-mask-image: -webkit-radial-gradient(white, black);
 
   &__slide {
@@ -17,8 +14,6 @@
     opacity: 0;
     transition: opacity 0.6s ease-in-out;
     display: flex;
-    
-    // 2. CONTENT ALIGNMENT (Pushes text to bottom-left)
     align-items: flex-end; 
     padding-bottom: 50px; 
     z-index: 1;
@@ -32,8 +27,6 @@
   &__bg {
     position: absolute;
     inset: 0;
-    
-    // 3. BACKGROUND FILL (Fixes the "small image" look)
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
@@ -43,7 +36,6 @@
   &__overlay {
     position: absolute;
     inset: 0;
-    // Darkens the left side so text is readable
     background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%);
     z-index: 2;
   }
@@ -60,11 +52,11 @@
     font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 10px;
-    &--accent { color: #fcc419; } // Yellow color for "PITT"
+    &--accent { color: #fcc419; } 
   }
 
   &__badge {
-    background: #00b341; // Correct Green from your photo
+    background: #00b341;
     padding: 4px 12px;
     border-radius: 8px;
     font-weight: bold;
