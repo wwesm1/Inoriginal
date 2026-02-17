@@ -348,6 +348,7 @@ body .background-image-troll .follow__btns .follow__btn:hover {
 }
 .hero__arrow--right {
   right: 20px;
+<<<<<<< HEAD
 }
 
 .hero__meta {
@@ -536,6 +537,8 @@ body .background-image-troll .follow__btns .follow__btn:hover {
   gap: 8px;
   font-size: 12px;
   color: rgba(255, 255, 255, 0.6);
+=======
+>>>>>>> 7f47a8a332404e23312bf37ed1598782ab0c5b7a
 }
 
 /*# sourceMappingURL=style.css.map */
