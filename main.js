@@ -103,17 +103,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-<script>
-  const row = document.querySelector(".collections-row");
-
-  function scrollRight() {
-    row.scrollLeft += 800; 
-  }
-
-  function scrollLeft() {
-    row.scrollLeft -= 800;
-  }
-</script>
 
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const row = document.querySelector('.collections__grid');
+  const left = document.querySelector('.studio-nav.left');
+  const right = document.querySelector('.studio-nav.right');
+
+  const scrollAmount = 300;
+
+  right.addEventListener('click', () => {
+    row.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+
+  left.addEventListener('click', () => {
+    row.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+});
 

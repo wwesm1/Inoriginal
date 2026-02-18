@@ -1,0 +1,144 @@
+.footer {
+  background: linear-gradient(180deg, #0f172a 0%, #0b1324 100%);
+  padding: 80px 80px;
+  position: relative;
+  color: #9ca3af;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 80px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    h3 {
+      color: white;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+  }
+
+  &__icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  &__desc {
+    line-height: 1.7;
+    margin-bottom: 25px;
+    max-width: 420px;
+  }
+
+  &__copyright {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  &__dev {
+    margin-bottom: 20px;
+
+    a {
+      color: #3b82f6;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 15px;
+  }
+
+  .social svg {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #60a5fa;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+    opacity: 0.8;
+    
+
+    &:hover {
+    opacity: 0.2; 
+    }
+  }
+
+  &__col {
+
+    h4 {
+      color: white;
+      font-size: 20px;
+      margin-bottom: 25px;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        width: 35px;
+        height: 2px;
+        background: #373a45;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 14px;
+
+        a {
+          text-decoration: none;
+          color: #9ca3af;
+          transition: .25s;
+
+          &:hover {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  &__scrollTop {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+      transform: translateY(-4px);
+      background: #1d4ed8;
+    }
+  }
+}

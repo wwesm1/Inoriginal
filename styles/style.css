@@ -897,7 +897,7 @@ body .studio__card.visible {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.6s ease;
 }
 
 .top-card::after {
@@ -942,17 +942,54 @@ body .studio__card.visible {
   background: rgba(0, 0, 0, 0.85);
 }
 
+.top-card {
+  position: relative;
+  z-index: 2;
+  width: 240px;
+  height: 370px;
+  border-radius: 20px;
+  background: #000;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.top-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1), filter 1s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
 .top-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   padding: 24px;
-  z-index: 2;
+  z-index: 5;
   color: #fff;
-  transform: translateY(30px);
   opacity: 0;
-  transition: all 0.4s ease;
+  transform: translateY(60px);
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.7s ease;
+  will-change: transform, opacity;
+}
+
+.top-card:hover {
+  transform: translateY(-22px);
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.7);
+}
+
+.top-card:hover .top-image {
+  transform: scale(1.12);
+  filter: brightness(0.55);
+}
+
+.top-card:hover .top-overlay {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .top-name {
@@ -1039,12 +1076,6 @@ body .studio__card.visible {
   flex-shrink: 0;
 }
 
-body {
-  margin: 0;
-  background: #0f172a;
-  color: #ffffff;
-}
-
 .collections {
   padding: 60px 80px;
 }
@@ -1052,32 +1083,41 @@ body {
   font-size: 42px;
   margin-bottom: 40px;
   font-weight: 700;
+  color: aliceblue;
 }
+
+.collections-wrapper {
+  position: relative;
+}
+
 .collections__grid {
   display: flex;
   gap: 24px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
-.collections-section {
-  position: relative;
+.collections__grid::-webkit-scrollbar {
+  display: none;
 }
 
 .card {
-  position: relative;
+  flex: 0 0 auto;
   width: 260px;
   height: 260px;
   border-radius: 22px;
   overflow: hidden;
-  background: #1e293b;
+  position: relative;
   cursor: pointer;
-  transition: transform 0.35s ease, box-shadow 0.35s ease, border 0.3s ease;
+  transition: 0.35s ease;
   border: 2px solid transparent;
 }
 .card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: 0.6s ease;
 }
 .card__overlay {
   position: absolute;
@@ -1092,17 +1132,17 @@ body {
 }
 .card__content h3 {
   margin: 0;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
+  color: aliceblue;
 }
 .card__content span {
-  font-size: 13px;
+  font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 1px;
   opacity: 0.8;
+  color: aliceblue;
 }
 .card:hover {
-  transform: translateY(-6px);
   border: 2px solid #2563eb;
   box-shadow: 0 0 25px rgba(37, 99, 235, 0.4);
 }
@@ -1110,63 +1150,145 @@ body {
   transform: scale(1.06);
 }
 
-.collections-section {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.collections-row {
-  display: flex;
-  gap: 24px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-  padding: 0 80px;
-  scroll-snap-type: x mandatory;
-}
-
-.collections-row::-webkit-scrollbar {
-  display: none;
-}
-
-.card {
-  flex-shrink: 0;
-  scroll-snap-align: start;
-}
-
-.collections-row::-webkit-scrollbar {
-  display: none;
-}
-
-.collections-nav {
+.studio-nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 56px;
-  height: 56px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   border: none;
-  background: rgba(15, 23, 42, 0.9);
   color: white;
   font-size: 22px;
   cursor: pointer;
   z-index: 10;
-  transition: 0.3s ease;
+}
+.studio-nav.left {
+  left: -25px;
+}
+.studio-nav.right {
+  right: -25px;
 }
 
-.collections-nav.left {
-  left: 10px;
+.footer {
+  background: linear-gradient(180deg, #0f172a 0%, #0b1324 100%);
+  padding: 80px 80px;
+  position: relative;
+  color: #9ca3af;
 }
-
-.collections-nav.right {
-  right: 10px;
+.footer__container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 80px;
 }
-
-.collections-nav:hover {
-  transform: translateY(-50%) scale(1.15);
+.footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.footer__logo h3 {
+  color: white;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.footer__icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+.footer__desc {
+  line-height: 1.7;
+  margin-bottom: 25px;
+  max-width: 420px;
+}
+.footer__copyright {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.footer__dev {
+  margin-bottom: 20px;
+}
+.footer__dev a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+.footer__dev a:hover {
+  text-decoration: underline;
+}
+.footer__social {
+  display: flex;
+  gap: 15px;
+}
+.footer .social svg {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  opacity: 0.8;
+}
+.footer .social svg:hover {
+  opacity: 0.2;
+}
+.footer__col h4 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 25px;
+  position: relative;
+}
+.footer__col h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 35px;
+  height: 2px;
+  background: #373a45;
+}
+.footer__col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__col ul li {
+  margin-bottom: 14px;
+}
+.footer__col ul li a {
+  text-decoration: none;
+  color: #9ca3af;
+  transition: 0.25s;
+}
+.footer__col ul li a:hover {
+  color: white;
+}
+.footer__scrollTop {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  border: none;
   background: #2563eb;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.footer__scrollTop:hover {
+  transform: translateY(-4px);
+  background: #1d4ed8;
 }
 
 /*# sourceMappingURL=style.css.map */
