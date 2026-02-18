@@ -105,3 +105,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+
+<script>
+  function scrollCollections(amount) {
+    document.getElementById("collectionsRow")
+      .scrollBy({ left: amount, behavior: "smooth" });
+  }
+</script>
