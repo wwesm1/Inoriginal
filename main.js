@@ -54,7 +54,6 @@ if (scrollContainer && btnLeft && btnRight) {
 }
 
 
-// ================= TOP ROW SLIDER =================
 const slider = document.querySelector('.top-row');
 const nextBtn = document.querySelector('.next');
 const prevBtn = document.querySelector('.prev');
