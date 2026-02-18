@@ -556,11 +556,8 @@ body .watch__movies .container .watch__movies-title .watch__movies-description {
   transform: translateX(0);
 }
 
-.cards-slider {
-  position: relative;
-}
-
 .cards-scroll {
+  overflow-x: visible;
   overflow-x: auto;
   overflow-y: visible;
   scroll-behavior: smooth;
@@ -570,7 +567,6 @@ body .watch__movies .container .watch__movies-title .watch__movies-description {
   display: none;
 }
 
-/* row */
 .cards-row {
   display: flex;
   gap: 22px;
@@ -578,33 +574,45 @@ body .watch__movies .container .watch__movies-title .watch__movies-description {
   position: relative;
 }
 
+.cards-slider {
+  position: relative;
+}
+
 .cards-nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 52px;
-  height: 52px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   border: none;
   background: rgba(18, 22, 35, 0.95);
+  backdrop-filter: blur(6px);
   color: #ffffff;
-  font-size: 26px;
+  font-size: 28px;
   cursor: pointer;
-  z-index: 20;
+  z-index: 50;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.25s ease;
+  transition: 0.25s ease;
 }
 .cards-nav:hover {
   background: #0094ff;
   transform: translateY(-50%) scale(1.1);
 }
+.cards-nav:active {
+  transform: translateY(-50%) scale(0.95);
+}
+.cards-nav:disabled {
+  opacity: 0.35;
+  pointer-events: none;
+}
 .cards-nav--left {
-  left: -15px;
+  left: -60px;
 }
 .cards-nav--right {
-  right: -15px;
+  right: -60px;
 }
 
 .card-item {
@@ -745,17 +753,17 @@ body .watch__movies .container .watch__movies-title .watch__movies-description {
 
 .top-section {
   position: relative;
-  padding: 80px 0 120px;
+  padding: 50px 0 160px;
   background: linear-gradient(180deg, #061226 0%, #081a35 100%);
   overflow: hidden;
 }
 
 .top-title {
-  font-size: 42px;
-  font-weight: 700;
+  font-size: 48px;
+  font-weight: 800;
   color: #fff;
-  margin-bottom: 80px;
-  padding-left: 80px;
+  margin-bottom: 100px;
+  padding-left: 120px;
 }
 .top-title span {
   color: #2f8cff;
@@ -765,66 +773,66 @@ body .watch__movies .container .watch__movies-title .watch__movies-description {
 .top-row {
   display: flex;
   align-items: center;
-  padding-left: 120px;
+  gap: 10px;
+  padding-left: 160px;
+  position: relative;
 }
 
 .top-item {
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  margin-right: 60px;
 }
 
 .top-number {
   position: absolute;
-  left: -140px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 340px;
-  font-weight: 800;
-  line-height: 1;
-  color: rgba(47, 140, 255, 0.18);
-  z-index: 0;
+  left: -180px;
+  bottom: 19px;
+  font-size: 360px;
+  font-weight: 900;
+  line-height: 0.8;
+  background: linear-gradient(180deg, #2b87ff 0%, #1656a8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 1;
+  opacity: 0.7;
   user-select: none;
   pointer-events: none;
+  font-style: italic;
 }
 
 .top-card {
   position: relative;
   z-index: 2;
-}
-
-.top-card {
-  position: relative;
-  width: 260px;
-  height: 390px;
+  width: 240px;
+  height: 370px;
   border-radius: 20px;
+  background: #000;
   overflow: hidden;
-  z-index: 2;
-  cursor: pointer;
-  transition: all 0.4s ease;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
 }
 
 .top-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.3s ease;
 }
 
 .top-card::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.6) 75%, rgba(0, 0, 0, 0.95) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.7) 75%, rgba(0, 0, 0, 0.95) 100%);
   z-index: 1;
   transition: opacity 0.4s ease;
 }
 
 .top-badge {
   position: absolute;
-  top: 16px;
-  left: 16px;
+  top: 18px;
+  left: 18px;
   background: linear-gradient(90deg, #ff7a00, #ff3d00);
   padding: 6px 14px;
   border-radius: 8px;
@@ -836,13 +844,13 @@ body .watch__movies .container .watch__movies-title .watch__movies-description {
 
 .top-bookmark {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 34px;
-  height: 34px;
-  border-radius: 8px;
+  top: 18px;
+  right: 18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
   border: none;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.55);
   color: #fff;
   font-size: 16px;
   cursor: pointer;
@@ -851,7 +859,7 @@ body .watch__movies .container .watch__movies-title .watch__movies-description {
 }
 
 .top-bookmark:hover {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.85);
 }
 
 .top-overlay {
@@ -859,10 +867,10 @@ body .watch__movies .container .watch__movies-title .watch__movies-description {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 20px;
+  padding: 24px;
   z-index: 2;
   color: #fff;
-  transform: translateY(20px);
+  transform: translateY(30px);
   opacity: 0;
   transition: all 0.4s ease;
 }
@@ -870,18 +878,18 @@ body .watch__movies .container .watch__movies-title .watch__movies-description {
 .top-name {
   font-size: 20px;
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .top-ratings {
   display: flex;
   gap: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .rating {
   background: #00b368;
-  padding: 4px 10px;
+  padding: 5px 10px;
   border-radius: 6px;
   font-size: 12px;
   font-weight: 700;
@@ -889,21 +897,67 @@ body .watch__movies .container .watch__movies-title .watch__movies-description {
 
 .top-meta {
   font-size: 13px;
-  opacity: 0.8;
+  opacity: 0.75;
 }
 
+/* HOVER */
 .top-card:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  transform: translateY(-18px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
 }
 
 .top-card:hover .top-image {
-  transform: scale(1.08);
+  transform: scale(1.1);
 }
 
 .top-card:hover .top-overlay {
   transform: translateY(0);
   opacity: 1;
+}
+
+.top-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px;
+  z-index: 5;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s cubic-bezier(0.2, 1, 0.3, 1), transform 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.top-card:hover .top-overlay {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.top-card:hover .top-image {
+  transform: scale(1.08);
+  filter: brightness(0.6);
+  transition: transform 0.8s ease, filter 0.8s ease;
+}
+
+.top-image {
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.top-row {
+  overflow-x: visible;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  display: flex;
+}
+
+.top-row::-webkit-scrollbar {
+  display: none;
+}
+
+.top-item {
+  flex-shrink: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
