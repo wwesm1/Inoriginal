@@ -103,12 +103,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-
-
-
 <script>
-  function scrollTopRow(amount) {
-    document.getElementById("topRow")
-      .scrollBy({ left: amount, behavior: "smooth" });
+  const row = document.querySelector(".collections-row");
+
+  function scrollRight() {
+    row.scrollLeft += 800; 
+  }
+
+  function scrollLeft() {
+    row.scrollLeft -= 800;
   }
 </script>
+
+
+
