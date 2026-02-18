@@ -18,8 +18,6 @@ setInterval(() => {
   goToSlide(current);
 }, 4000);
 
-
-<script>
   const row = document.querySelector('.cards-scroll');
   const btnLeft = document.querySelector('.cards-nav--left');
   const btnRight = document.querySelector('.cards-nav--right');
@@ -33,10 +31,12 @@ setInterval(() => {
   btnLeft.addEventListener('click', () => {
     row.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
   });
-</script>
 
 
+const icon = document.getElementById('icon-trigger');
+const tray = document.getElementById('card-tray');
 
+<<<<<<< HEAD
 const scrollContainer = document.querySelector('.cards-scroll');
 const btnLeft = document.querySelector('.cards-nav--left');
 const btnRight = document.querySelector('.cards-nav--right');
@@ -89,3 +89,14 @@ window.addEventListener('load', updateButtons);
     };
   }
 </script>
+=======
+icon.addEventListener('click', () => {
+  // Toggle the 'hidden' class
+  tray.classList.toggle('hidden');
+  
+  // Optional: Smoothly scroll into view if it was hidden
+  if (!tray.classList.contains('hidden')) {
+    tray.scrollIntoView({ behavior: 'smooth' });
+  }
+});
+>>>>>>> ee70c08a0b1940cb5db7aa470b9eabe15a799433
