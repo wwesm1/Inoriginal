@@ -104,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+<<<<<<< HEAD
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -122,3 +123,89 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+=======
+// Wrap everything in a listener to wait for the page to load
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. The Slider (Drag to scroll)
+    const slider = document.querySelector('.top-row');
+
+    if (slider) { // This "if" prevents the error if the element is missing
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+
+        slider.addEventListener('mouseleave', () => isDown = false);
+        slider.addEventListener('mouseup', () => isDown = false);
+
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2;
+            slider.scrollLeft = scrollLeft - walk;
+        });
+    }
+
+    // 2. The Buttons (Studio scroll)
+    // We attach the function to the window so the HTML can "see" it
+    window.scrollCollections = function(amount) {
+        const row = document.getElementById("collectionsRow");
+        if (row) {
+            row.scrollBy({ left: amount, behavior: "smooth" });
+        } else {
+            console.error("Error: Could not find element with ID 'collectionsRow'");
+        }
+    };
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const studioRow = document.querySelector('.studio-row');
+  const leftBtn = document.querySelector('.studio-nav.left');
+  const rightBtn = document.querySelector('.studio-nav.right');
+
+  if (studioRow && leftBtn && rightBtn) {
+    rightBtn.onclick = () => studioRow.scrollBy({ left: 220, behavior: 'smooth' });
+    leftBtn.onclick = () => studioRow.scrollBy({ left: -220, behavior: 'smooth' });
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Select the scroll container
+    const scrollContainer = document.querySelector('.cards-scroll');
+    const leftBtn = document.querySelector('.cards-nav--left');
+    const rightBtn = document.querySelector('.cards-nav--right');
+
+    if (scrollContainer && leftBtn && rightBtn) {
+        const scrollAmount = 300; // How far to scroll on each click
+
+        rightBtn.onclick = () => {
+            scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        };
+
+        leftBtn.onclick = () => {
+            scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        };
+    }
+});
+
+
+// This handles ALL scroll rows on your page automatically
+document.querySelectorAll('.studio-section, .cards-slider').forEach(slider => {
+  const row = slider.querySelector('.studio-row, .cards-scroll');
+  const leftBtn = slider.querySelector('.left, .cards-nav--left');
+  const rightBtn = slider.querySelector('.right, .cards-nav--right');
+
+  if (row && leftBtn && rightBtn) {
+    rightBtn.onclick = () => row.scrollBy({ left: 400, behavior: 'smooth' });
+    leftBtn.onclick = () => row.scrollBy({ left: -400, behavior: 'smooth' });
+  }
+});
+>>>>>>> 8ec53f39a7bee42493d283e001d257a12b3e494b

@@ -113,16 +113,6 @@ button {
   padding: 25px 0;
 }
 
-header {
-  position: relative;
-  z-index: 9999;
-}
-
-.follow__btn {
-  position: relative;
-  z-index: 9999;
-}
-
 body {
   background-color: #1a1d29;
 }
@@ -155,7 +145,8 @@ body .navbar .nav__items {
   align-items: center;
   justify-content: center;
   gap: 25px;
-  background-color: #1a1d29;
+  position: relative;
+  z-index: 9999;
 }
 body .navbar .nav__items li a {
   color: #8d8e94;
@@ -414,6 +405,30 @@ body .studio__card {
 }
 body .studio__card.visible {
   opacity: 1;
+}
+
+.studio__card {
+  position: relative;
+  width: 200px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #1a1a1a;
+}
+.studio__card__title {
+  margin-bottom: 9rem;
+  z-index: 2;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+}
+.studio__card .genre {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  object-fit: cover;
+  z-index: 1;
 }
 
 .hero {
