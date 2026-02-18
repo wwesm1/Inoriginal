@@ -104,7 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
 // Wrap everything in a listener to wait for the page to load
 document.addEventListener('DOMContentLoaded', () => {
     
@@ -176,14 +175,16 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 });
-<script>
-  const row = document.querySelector(".collections-row");
 
-  function scrollRight() {
-    row.scrollLeft += 800; 
-  }
 
-  function scrollLeft() {
-    row.scrollLeft -= 800;
+// This handles ALL scroll rows on your page automatically
+document.querySelectorAll('.studio-section, .cards-slider').forEach(slider => {
+  const row = slider.querySelector('.studio-row, .cards-scroll');
+  const leftBtn = slider.querySelector('.left, .cards-nav--left');
+  const rightBtn = slider.querySelector('.right, .cards-nav--right');
+
+  if (row && leftBtn && rightBtn) {
+    rightBtn.onclick = () => row.scrollBy({ left: 400, behavior: 'smooth' });
+    leftBtn.onclick = () => row.scrollBy({ left: -400, behavior: 'smooth' });
   }
-</script>
+});
