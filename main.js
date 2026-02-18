@@ -107,8 +107,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 <script>
-  function scrollCollections(amount) {
-    document.getElementById("collectionsRow")
+  function scrollTopRow(amount) {
+    document.getElementById("topRow")
       .scrollBy({ left: amount, behavior: "smooth" });
   }
 </script>
