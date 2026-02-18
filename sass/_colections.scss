@@ -99,8 +99,7 @@ body {
   overflow-x: auto;
   scroll-behavior: smooth;
   scrollbar-width: none;
-  padding: 0 120px;   // space like screenshot
-}
+  padding: 0 120px;   
 
 .collections-row::-webkit-scrollbar {
   display: none;
@@ -112,10 +111,10 @@ body {
 }
 
 .card {
-  flex: 0 0 auto;   // stronger than flex-shrink:0
+  flex: 0 0 auto;   
 }
 
-
+}
 
 .collections-row::-webkit-scrollbar {
   display: none;
