@@ -24,6 +24,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: "Open Sans";
+  overflow-x: hidden;
 }
 
 img,
@@ -334,6 +335,85 @@ body .watch__movies .container .watch__movies-title .watch__movies-description {
   font-size: 24px;
   font-weight: 600;
   text-align: center;
+}
+body .studio-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 0;
+}
+body .studio-row {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px;
+  overflow-x: hidden;
+}
+body .studio-row::-webkit-scrollbar {
+  display: none;
+}
+body .studio__card {
+  position: relative;
+  min-width: 220px;
+  height: 200px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #2a3140, #1c2230);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 8px 20px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+body .studio__card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 20%, rgba(255, 255, 255, 0.08), transparent 80%);
+  opacity: 0.4;
+  transition: 0.4s;
+}
+body .studio__card img {
+  width: 72%;
+  object-fit: contain;
+  filter: brightness(0.9);
+  transition: 0.35s;
+  z-index: 2;
+}
+body .studio__card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 0 0 2px #3b82f6, 0 20px 45px rgba(0, 0, 0, 0.65);
+}
+body .studio__card:hover img {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+body .studio__card:hover::before {
+  opacity: 0.8;
+}
+body .studio-nav {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+body .studio-nav:hover {
+  transform: scale(1.12);
+}
+body .studio__card {
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+body .studio__card.visible {
+  opacity: 1;
 }
 
 .hero {
@@ -900,7 +980,6 @@ body .watch__movies .container .watch__movies-title .watch__movies-description {
   opacity: 0.75;
 }
 
-/* HOVER */
 .top-card:hover {
   transform: translateY(-18px);
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
