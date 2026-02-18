@@ -105,7 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
 // Wrap everything in a listener to wait for the page to load
 document.addEventListener('DOMContentLoaded', () => {
     
@@ -177,3 +176,14 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 });
+<script>
+  const row = document.querySelector(".collections-row");
+
+  function scrollRight() {
+    row.scrollLeft += 800; 
+  }
+
+  function scrollLeft() {
+    row.scrollLeft -= 800;
+  }
+</script>

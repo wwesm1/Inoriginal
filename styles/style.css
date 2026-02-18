@@ -1058,6 +1058,10 @@ body {
   gap: 24px;
 }
 
+.collections-section {
+  position: relative;
+}
+
 .card {
   position: relative;
   width: 260px;
@@ -1118,6 +1122,18 @@ body {
   gap: 24px;
   overflow-x: auto;
   scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 0 80px;
+  scroll-snap-type: x mandatory;
+}
+
+.collections-row::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex-shrink: 0;
+  scroll-snap-align: start;
 }
 
 .collections-row::-webkit-scrollbar {
@@ -1125,20 +1141,32 @@ body {
 }
 
 .collections-nav {
-  width: 48px;
-  height: 48px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   border: none;
-  background: #1e293b;
+  background: rgba(15, 23, 42, 0.9);
   color: white;
-  font-size: 20px;
+  font-size: 22px;
   cursor: pointer;
-  transition: 0.25s;
-  flex-shrink: 0;
+  z-index: 10;
+  transition: 0.3s ease;
+}
+
+.collections-nav.left {
+  left: 10px;
+}
+
+.collections-nav.right {
+  right: 10px;
 }
 
 .collections-nav:hover {
-  transform: scale(1.12);
+  transform: translateY(-50%) scale(1.15);
+  background: #2563eb;
 }
 
 /*# sourceMappingURL=style.css.map */
