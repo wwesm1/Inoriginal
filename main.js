@@ -106,9 +106,74 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-<script>
-  function scrollCollections(amount) {
-    document.getElementById("collectionsRow")
-      .scrollBy({ left: amount, behavior: "smooth" });
+// Wrap everything in a listener to wait for the page to load
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. The Slider (Drag to scroll)
+    const slider = document.querySelector('.top-row');
+
+    if (slider) { // This "if" prevents the error if the element is missing
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+
+        slider.addEventListener('mouseleave', () => isDown = false);
+        slider.addEventListener('mouseup', () => isDown = false);
+
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2;
+            slider.scrollLeft = scrollLeft - walk;
+        });
+    }
+
+    // 2. The Buttons (Studio scroll)
+    // We attach the function to the window so the HTML can "see" it
+    window.scrollCollections = function(amount) {
+        const row = document.getElementById("collectionsRow");
+        if (row) {
+            row.scrollBy({ left: amount, behavior: "smooth" });
+        } else {
+            console.error("Error: Could not find element with ID 'collectionsRow'");
+        }
+    };
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const studioRow = document.querySelector('.studio-row');
+  const leftBtn = document.querySelector('.studio-nav.left');
+  const rightBtn = document.querySelector('.studio-nav.right');
+
+  if (studioRow && leftBtn && rightBtn) {
+    rightBtn.onclick = () => studioRow.scrollBy({ left: 220, behavior: 'smooth' });
+    leftBtn.onclick = () => studioRow.scrollBy({ left: -220, behavior: 'smooth' });
   }
-</script>
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Select the scroll container
+    const scrollContainer = document.querySelector('.cards-scroll');
+    const leftBtn = document.querySelector('.cards-nav--left');
+    const rightBtn = document.querySelector('.cards-nav--right');
+
+    if (scrollContainer && leftBtn && rightBtn) {
+        const scrollAmount = 300; // How far to scroll on each click
+
+        rightBtn.onclick = () => {
+            scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        };
+
+        leftBtn.onclick = () => {
+            scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        };
+    }
+});
