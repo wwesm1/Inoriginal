@@ -7,6 +7,7 @@ header {
   position: relative;
   z-index: 9999;
 }
+
 body {
   background-color: #1a1d29;
 
@@ -235,4 +236,109 @@ body {
       }
     }
   }
+
+  .studio-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 0;
+  }
+
+  .studio-row {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px;
+    overflow-x: hidden;
+  }
+
+  .studio-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .studio__card {
+    position: relative;
+    min-width: 220px;
+    height: 200px;
+    border-radius: 20px;
+
+    background: linear-gradient(145deg, #2a3140, #1c2230);
+    backdrop-filter: blur(6px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: all .35s cubic-bezier(.2, .8, .2, 1);
+
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, .05),
+      0 8px 20px rgba(0, 0, 0, .35);
+
+    overflow: hidden;
+  }
+
+  .studio__card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg,
+        transparent 20%,
+        rgba(255, 255, 255, .08),
+        transparent 80%);
+    opacity: .4;
+    transition: .4s;
+  }
+
+  .studio__card img {
+    width: 72%;
+    object-fit: contain;
+    filter: brightness(.9);
+    transition: .35s;
+    z-index: 2;
+  }
+
+  .studio__card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow:
+      0 0 0 2px #3b82f6,
+      0 20px 45px rgba(0, 0, 0, .65);
+  }
+
+  .studio__card:hover img {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+  }
+
+  .studio__card:hover::before {
+    opacity: .8;
+  }
+
+  .studio-nav {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .25s;
+  }
+
+  .studio-nav:hover {
+    transform: scale(1.12);
+  }
+
+  .studio__card {
+    opacity: .7;
+    transition: opacity .3s ease, transform .3s ease;
+  }
+
+  .studio__card.visible {
+    opacity: 1;
+  }
+
 }

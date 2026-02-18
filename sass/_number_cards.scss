@@ -32,15 +32,6 @@
   margin-right: 60px;   
 }
 
-<<<<<<< HEAD
-.top-numbers {
-  @include flex-space-between;  
-}
-
-.top-card {
-  position: relative;
-  z-index: 2;
-=======
 .top-number {
   position: absolute;
   left: -180px;           
@@ -60,7 +51,6 @@
   user-select: none;
   pointer-events: none; 
   font-style: italic;
->>>>>>> 8d59e7e4261bb19f3707b3e18b94731713de5c4b
 }
 
 .top-card {
@@ -166,7 +156,6 @@
   opacity: 0.75;
 }
 
-/* HOVER */
 .top-card:hover {
   transform: translateY(-18px);
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
