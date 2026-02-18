@@ -775,18 +775,10 @@ body .watch__movies .container .watch__movies-title .watch__movies-description {
   align-items: center;
 }
 
-.top-number {
-  position: absolute;
-  left: -140px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 340px;
-  font-weight: 800;
-  line-height: 1;
-  color: rgba(47, 140, 255, 0.18);
-  z-index: 0;
-  user-select: none;
-  pointer-events: none;
+.top-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .top-card {

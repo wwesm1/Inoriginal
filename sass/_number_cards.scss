@@ -33,19 +33,10 @@
   align-items: center;
 }
 
-.top-number {
-  position: absolute;
-  left: -140px;   
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 340px;
-  font-weight: 800;
-  line-height: 1;
-  color: rgba(47, 140, 255, 0.18);
-  z-index: 0;
-  user-select: none;
-  pointer-events: none;
+.top-numbers {
+  @include flex-space-between;  
 }
+
 .top-card {
   position: relative;
   z-index: 2;
