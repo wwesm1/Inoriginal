@@ -104,8 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-<<<<<<< HEAD
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const row = document.querySelector('.collections__grid');
@@ -123,7 +121,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-=======
 // Wrap everything in a listener to wait for the page to load
 document.addEventListener('DOMContentLoaded', () => {
     
@@ -208,4 +205,3 @@ document.querySelectorAll('.studio-section, .cards-slider').forEach(slider => {
     leftBtn.onclick = () => row.scrollBy({ left: -400, behavior: 'smooth' });
   }
 });
->>>>>>> 8ec53f39a7bee42493d283e001d257a12b3e494b

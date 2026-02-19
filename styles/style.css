@@ -120,6 +120,8 @@ body .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  z-index: 9999;
 }
 body .navbar .nav-logo {
   display: flex;

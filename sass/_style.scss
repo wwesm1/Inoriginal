@@ -3,6 +3,8 @@ body {
 
   .navbar {
     @include flex-space-between;
+    position: relative;
+    z-index: 9999;
 
     .nav-logo {
       display: flex;
