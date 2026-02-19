@@ -1,4 +1,4 @@
-// ================= HERO SLIDER =================
+
 const slides = document.querySelectorAll('.hero__slide');
 const dots = document.querySelectorAll('.hero__dot');
 
@@ -14,8 +14,6 @@ function goToSlide(index) {
     current = index;
   }
 }
-
-// Auto slide
 if (slides.length > 0) {
   setInterval(() => {
     current = (current + 1) % slides.length;
@@ -23,8 +21,6 @@ if (slides.length > 0) {
   }, 4000);
 }
 
-
-// ================= CARD SCROLLER =================
 const scrollContainer = document.querySelector('.cards-scroll');
 const btnLeft = document.querySelector('.cards-nav--left');
 const btnRight = document.querySelector('.cards-nav--right');
@@ -68,8 +64,6 @@ if (slider && nextBtn && prevBtn) {
   });
 }
 
-
-// ================= ICON TRAY TOGGLE =================
 const icon = document.getElementById('icon-trigger');
 const tray = document.getElementById('card-tray');
 
@@ -121,13 +115,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+<<<<<<< HEAD
 // Wrap everything in a listener to wait for the page to load
+=======
+>>>>>>> 6d539ff6ee4fe71f5b1f5d47dab51ca114580dba
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. The Slider (Drag to scroll)
     const slider = document.querySelector('.top-row');
 
-    if (slider) { // This "if" prevents the error if the element is missing
+    if (slider) { 
         let isDown = false;
         let startX;
         let scrollLeft;
@@ -150,9 +146,6 @@ document.addEventListener('DOMContentLoaded', () => {
             slider.scrollLeft = scrollLeft - walk;
         });
     }
-
-    // 2. The Buttons (Studio scroll)
-    // We attach the function to the window so the HTML can "see" it
     window.scrollCollections = function(amount) {
         const row = document.getElementById("collectionsRow");
         if (row) {
@@ -175,13 +168,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Select the scroll container
     const scrollContainer = document.querySelector('.cards-scroll');
     const leftBtn = document.querySelector('.cards-nav--left');
     const rightBtn = document.querySelector('.cards-nav--right');
 
     if (scrollContainer && leftBtn && rightBtn) {
-        const scrollAmount = 300; // How far to scroll on each click
+        const scrollAmount = 300;
 
         rightBtn.onclick = () => {
             scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
@@ -193,8 +185,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
-// This handles ALL scroll rows on your page automatically
 document.querySelectorAll('.studio-section, .cards-slider').forEach(slider => {
   const row = slider.querySelector('.studio-row, .cards-scroll');
   const leftBtn = slider.querySelector('.left, .cards-nav--left');
