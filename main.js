@@ -114,11 +114,6 @@ document.addEventListener("DOMContentLoaded", () => {
     row.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
   });
 });
-
-<<<<<<< HEAD
-// Wrap everything in a listener to wait for the page to load
-=======
->>>>>>> 6d539ff6ee4fe71f5b1f5d47dab51ca114580dba
 document.addEventListener('DOMContentLoaded', () => {
     
     const slider = document.querySelector('.top-row');
