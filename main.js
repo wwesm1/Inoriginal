@@ -87,11 +87,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (row && left && right) {
     right.addEventListener('click', () => {
-      row.scrollBy({ left: scrollAmount, behavior:'smooth' });
+      row.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     });
 
     left.addEventListener('click', () => {
-      row.scrollBy({ left: -scrollAmount, behavior:'smooth' });
+      row.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
     });
   }
 
@@ -115,40 +115,40 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 document.addEventListener('DOMContentLoaded', () => {
-    
-    const slider = document.querySelector('.top-row');
 
-    if (slider) { 
-        let isDown = false;
-        let startX;
-        let scrollLeft;
+  const slider = document.querySelector('.top-row');
 
-        slider.addEventListener('mousedown', (e) => {
-            isDown = true;
-            slider.classList.add('active');
-            startX = e.pageX - slider.offsetLeft;
-            scrollLeft = slider.scrollLeft;
-        });
+  if (slider) {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
 
-        slider.addEventListener('mouseleave', () => isDown = false);
-        slider.addEventListener('mouseup', () => isDown = false);
+    slider.addEventListener('mousedown', (e) => {
+      isDown = true;
+      slider.classList.add('active');
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    });
 
-        slider.addEventListener('mousemove', (e) => {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - slider.offsetLeft;
-            const walk = (x - startX) * 2;
-            slider.scrollLeft = scrollLeft - walk;
-        });
+    slider.addEventListener('mouseleave', () => isDown = false);
+    slider.addEventListener('mouseup', () => isDown = false);
+
+    slider.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 2;
+      slider.scrollLeft = scrollLeft - walk;
+    });
+  }
+  window.scrollCollections = function (amount) {
+    const row = document.getElementById("collectionsRow");
+    if (row) {
+      row.scrollBy({ left: amount, behavior: "smooth" });
+    } else {
+      console.error("Error: Could not find element with ID 'collectionsRow'");
     }
-    window.scrollCollections = function(amount) {
-        const row = document.getElementById("collectionsRow");
-        if (row) {
-            row.scrollBy({ left: amount, behavior: "smooth" });
-        } else {
-            console.error("Error: Could not find element with ID 'collectionsRow'");
-        }
-    };
+  };
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -163,21 +163,21 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    const scrollContainer = document.querySelector('.cards-scroll');
-    const leftBtn = document.querySelector('.cards-nav--left');
-    const rightBtn = document.querySelector('.cards-nav--right');
+  const scrollContainer = document.querySelector('.cards-scroll');
+  const leftBtn = document.querySelector('.cards-nav--left');
+  const rightBtn = document.querySelector('.cards-nav--right');
 
-    if (scrollContainer && leftBtn && rightBtn) {
-        const scrollAmount = 300;
+  if (scrollContainer && leftBtn && rightBtn) {
+    const scrollAmount = 300;
 
-        rightBtn.onclick = () => {
-            scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-        };
+    rightBtn.onclick = () => {
+      scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    };
 
-        leftBtn.onclick = () => {
-            scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-        };
-    }
+    leftBtn.onclick = () => {
+      scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    };
+  }
 });
 
 document.querySelectorAll('.studio-section, .cards-slider').forEach(slider => {
@@ -189,4 +189,40 @@ document.querySelectorAll('.studio-section, .cards-slider').forEach(slider => {
     rightBtn.onclick = () => row.scrollBy({ left: 400, behavior: 'smooth' });
     leftBtn.onclick = () => row.scrollBy({ left: -400, behavior: 'smooth' });
   }
+});
+
+// Select all nav links
+const navLinks = document.querySelectorAll('.nav__items li a');
+
+// Get current page filename (e.g., 'new.html')
+const currentPage = window.location.pathname.split('/').pop();
+
+// Loop through nav links
+navLinks.forEach(link => {
+  // Get the filename part of href (e.g., 'new.html')
+  const linkPage = link.getAttribute('href').split('/').pop();
+
+  // Compare and add 'active' class if it matches
+  if (linkPage === currentPage) {
+    link.classList.add('active');
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Select all nav links
+  const navLinks = document.querySelectorAll('.nav__items li a');
+
+  // Get current page filename (e.g., 'new.html')
+  const currentPage = window.location.pathname.split("/").pop();
+
+  // Loop through nav links
+  navLinks.forEach(link => {
+    // Extract just the filename from href
+    const linkPage = link.getAttribute('href').split('/').pop();
+
+    // Add 'active' class if it matches current page
+    if (linkPage === currentPage) {
+      link.classList.add('active');
+    }
+  });
 });
