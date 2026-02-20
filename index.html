@@ -12,30 +12,73 @@
 <body>
   <header>
     <nav class="navbar container">
-      <a href="#" class="nav-logo">
+      <a href="./index.html" class="nav-logo">
         <img src="assets/svg/inoriginal-logo.svg" class="logo-icon" alt="icon">
         <span class="logo-text">INORIGINAL</span>
       </a>
       <ul class="nav__items">
         <li>
-          <a href="#">Новинки</a>
+          
+          <a href="./pages/new.html">Новинки</a>
         </li>
         <li>
-          <a href="#">Фильмы</a>
+        
+          <a href="./pages/movies.html">Фильмы</a>
         </li>
         <li>
-          <a href="#">Сериалы</a>
+          <a href="./pages/series.html">Сериалы</a>
         </li>
         <li>
-          <a href="#">Жанры</a>
+          <a href="./pages/genre.html">Жанры</a>
         </li>
         <li>
-          <a href="#">Студии</a>
+          <a href="./pages/studio.html">Студии</a>
         </li>
         <li>
-          <a href="#">Коллекции</a>
+          <a href="./pages/collection.html">Коллекции</a>
         </li>
       </ul>
+      <nav class="mobile-bottom-nav">
+  <a href="#" class="mobile-item active">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M3 10L12 3L21 10V21H3V10Z" stroke="currentColor" stroke-width="2"/>
+    </svg>
+    <span>Главная</span>
+  </a>
+
+  <a href="#" class="mobile-item">
+    <svg viewBox="0 0 24 24" fill="none">
+      <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+      <path d="M10 9L15 12L10 15V9Z" fill="currentColor"/>
+    </svg>
+    <span>Фильмы</span>
+  </a>
+
+  <a href="#" class="mobile-item">
+    <svg viewBox="0 0 24 24" fill="none">
+      <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+      <path d="M8 4V20M16 4V20" stroke="currentColor" stroke-width="2"/>
+    </svg>
+    <span>Сериалы</span>
+  </a>
+
+  <a href="#" class="mobile-item">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M4 19C4 19 6 17 12 17C18 17 20 19 20 19V5C20 5 18 3 12 3C6 3 4 5 4 5V19Z"
+        stroke="currentColor" stroke-width="2"/>
+    </svg>
+    <span>Словарь</span>
+  </a>
+
+  <a href="#" class="mobile-item">
+    <svg viewBox="0 0 24 24" fill="none">
+      <circle cx="5" cy="12" r="2" fill="currentColor"/>
+      <circle cx="12" cy="12" r="2" fill="currentColor"/>
+      <circle cx="19" cy="12" r="2" fill="currentColor"/>
+    </svg>
+    <span>Еще</span>
+  </a>
+</nav>
       <div class="items">
         <div class="nav_search">
           <button class="nav__search">
@@ -552,10 +595,6 @@
           <button class="blue-button">Подробно о подписке</button>
         </div>
         <img src="./assets/images/movies-two.png" alt="movies images" class="movies-image">
-      </div>
-    </section>
-    <section class="top__movies">
-      <div class="container">
       </div>
     </section>
 
@@ -1507,11 +1546,15 @@
         </div>
     </section>
 
-    <section class="collections">
+    <section class="collections ">
 
-  <h2 class="collections__title">Коллекции</h2>
 
-      <h2 class="collections__title">Коллекции</h2>
+      <div class="cards-header">
+        <h2 class="cards-title">
+          Коллекции
+          <span class="cards-arrow">›</span>
+        </h2>
+      </div>
 
 
       <div class="collections__grid">
@@ -1525,15 +1568,117 @@
 
     <div class="collections__grid">
 
-      <div class="card">
-        <img src="assets/images/images.jpg" alt="Harry Potter" />
-        <div class="card__overlay"></div>
-        <div class="card__content">
-          <h3>Harry Potter</h3>
-          <span>Collection</span>
-        </div>
-      </div>
 
+        <div class="collections-wrapper">
+    
+      
+          <div class="collections__grid">
+
+            <div class="card">
+              <img src="assets/images/images.jpg" alt="Harry Potter" />
+              <div class="card__overlay"></div>
+              <div class="card__content">
+                <h3>Harry Potter</h3>
+                <span>Collection</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="assets/svg/alone.jpeg" alt="Home Alone" />
+              <div class="card__overlay"></div>
+              <div class="card__content">
+                <h3>Home Alone</h3>
+                <span>Collection</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="assets/svg/it.jpg" alt="IT" />
+              <div class="card__overlay"></div>
+              <div class="card__content">
+                <h3>IT</h3>
+                <span>Collection</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="assets/svg/dune.jpg" alt="Dune" />
+              <div class="card__overlay"></div>
+              <div class="card__content">
+                <h3>Dune</h3>
+                <span>Collection</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="assets/images/deadpool.jpg" alt="Deadpool" />
+              <div class="card__overlay"></div>
+              <div class="card__content">
+                <h3>Deadpool</h3>
+                <span>Collection</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="assets/svg/spider.jpg" alt="Spider Man" />
+              <div class="card__overlay"></div>
+              <div class="card__content">
+                <h3>Spider Man</h3>
+                <span>Collection</span>
+              </div>
+            </div>
+            <div class="card">
+              <img src="assets/images/specture.webp" alt="Spider Man" />
+              <div class="card__overlay"></div>
+              <div class="card__content">
+                <h3>007</h3>
+                <span>Collection</span>
+              </div>
+            </div>
+            <div class="card">
+              <img src="assets/images/throne.jpg" alt="Spider Man" />
+              <div class="card__overlay"></div>
+              <div class="card__content">
+                <h3>game of throne</h3>
+                <span>Collection</span>
+              </div>
+            </div>
+            <div class="card">
+              <img src="assets/images/bat.jpg" alt="Spider Man" />
+              <div class="card__overlay"></div>
+              <div class="card__content">
+                <h3>batman</h3>
+                <span>Collection</span>
+              </div>
+            </div>
+            <div class="card">
+              <img src="assets/images/matrix.jpg" alt="Spider Man" />
+              <div class="card__overlay"></div>
+              <div class="card__content">
+                <h3>Matrix</h3>
+                <span>Collection</span>
+              </div>
+            </div>
+            <div class="card">
+              <img src="assets/images/x.jpg" alt="Spider Man" />
+              <div class="card__overlay"></div>
+              <div class="card__content">
+                <h3>X-men</h3>
+                <span>Collection</span>
+              </div>
+            </div>
+            <div class="card">
+              <img src="assets/images/op.jpg" alt="Spider Man" />
+              <div class="card__overlay"></div>
+              <div class="card__content">
+                <h3>Fast furious </h3>
+                <span>Collection</span>
+              </div>
+            </div>
+
+          </div>
+          <button class="studio-nav right">❯</button>
+        </div>
       <div class="card">
         <img src="assets/svg/alone.jpeg" alt="Home Alone" />
         <div class="card__overlay"></div>
@@ -1636,9 +1781,6 @@
 </section>
 
 
-        <button class="collections-nav right" onclick="scrollRight()">
-          &#10095;
-        </button>
       </div>
     </section>
     <section class="studios container">
@@ -1699,6 +1841,66 @@
         <button class="studio-nav right">❯</button>
 
       </div>
+
+       <section class="studios container">
+      <div class="cards-header">
+        <h2 class="cards-title">
+          Жанры
+          <span class="cards-arrow">›</span>
+        </h2>
+      </div>
+      <div class="studio-section">
+
+        <button class="studio-nav left">❮</button>
+
+        <div class="studio-row">
+
+          <div class="studio__card">
+            <p class="studio__card__title">Триллер</p>
+            <img src="./assets/images/thriller-genre.jpg" class="genre">
+          </div>
+
+          <div class="studio__card">
+            <p class="studio__card__title">Приключение</p>
+            <img src="./assets/images/adventure-genre.avif" class="genre">
+          </div>
+
+          <div class="studio__card">
+            <p class="studio__card__title">Фантастика</p>
+            <img src="./assets/images/fantasy-genre.avif" class="genre">
+          </div>
+
+          <div class="studio__card">
+            <p class="studio__card__title">Боевик</p>
+            <img src="./assets/images/action-genre.jpg" class="genre">
+          </div>
+
+          <div class="studio__card">
+            <p class="studio__card__title">Мелодрама</p>
+            <img src="./assets/images/melodrama-genre.jpg" class="genre">
+          </div>
+
+          <div class="studio__card">
+            <p class="studio__card__title">Криминальное</p>
+            <img src="./assets/images/criminal-genre.jpg" class="genre">
+          </div>
+
+          <div class="studio__card">
+            <p class="studio__card__title">Вестерны</p>
+            <img src="./assets/images/westren-genre.jfif" class="genre">
+          </div>
+
+        </div>
+
+        <button class="studio-nav right">❯</button>
+
+      </div>
+    </section>
+
+
+    
+    </div>
+    </section>
   </main>
 
 <footer class="footer">
@@ -1777,69 +1979,9 @@
 
 </footer>
     </section>
-    <section class="studios container">
-      <div class="cards-header">
-        <h2 class="cards-title">
-          Жанры
-          <span class="cards-arrow">›</span>
-        </h2>
-      </div>
-      <div class="studio-section">
-
-        <button class="studio-nav left">❮</button>
-
-        <div class="studio-row">
-
-          <div class="studio__card">
-            <p class="studio__card__title">Триллер</p>
-            <img src="./assets/images/thriller-genre.jpg" class="genre">
-          </div>
-
-          <div class="studio__card">
-            <p class="studio__card__title">Приключение</p>
-            <img src="./assets/images/adventure-genre.avif" class="genre">
-          </div>
-
-          <div class="studio__card">
-            <p class="studio__card__title">Фантастика</p>
-            <img src="./assets/images/fantasy-genre.avif" class="genre">
-          </div>
-
-          <div class="studio__card">
-            <p class="studio__card__title">Боевик</p>
-            <img src="./assets/images/action-genre.jpg" class="genre">
-          </div>
-
-          <div class="studio__card">
-            <p class="studio__card__title">Мелодрама</p>
-            <img src="./assets/images/melodrama-genre.jpg" class="genre">
-          </div>
-
-          <div class="studio__card">
-            <p class="studio__card__title">Криминальное</p>
-            <img src="./assets/images/criminal-genre.jpg" class="genre">
-          </div>
-
-          <div class="studio__card">
-            <p class="studio__card__title">Вестерны</p>
-            <img src="./assets/images/westren-genre.jfif" class="genre">
-          </div>
-
-        </div>
-
-        <button class="studio-nav right">❯</button>
-
-      </div>
-
-
-
-
-
 
     </section>
-
-
-  </main>
+  
 
 
 

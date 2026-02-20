@@ -3,6 +3,8 @@ body {
 
   .navbar {
     @include flex-space-between;
+    position: relative;
+    z-index: 9999;
 
     .nav-logo {
       display: flex;
@@ -36,44 +38,52 @@ body {
       z-index: 9999;
     }
 
+    .nav__items li {
+      position: relative;
+    }
+
     .nav__items li a {
       color: $cool-gray;
       font-size: $fs-18;
       font-weight: $fw-600;
-      position: relative;
-      left: -2rem;
-      padding-bottom: 12px;
-      transition: all 0.3s ease;
+      display: inline-block;
+      padding: 10px 0 12px;
+      transition: color 0.3s ease;
     }
 
-    .nav__items li a:hover,
+    .nav__items li:hover a,
     .nav__items li a.active {
       color: $white;
     }
 
+    /* underline effect */
     .nav__items li a::after {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       bottom: 0;
-      width: 104%;
-      height: 1.7px;
+      width: 100%;
+      height: 1.5px;
 
       background: linear-gradient(90deg,
           rgba(0, 133, 255, 0) 0%,
           rgba(0, 133, 255, 1) 50%,
           rgba(0, 133, 255, 0) 100%);
-      box-shadow: 0px 2px 8px rgba(0, 133, 255, 0.5),
-        0px 4px 12px rgba(0, 133, 255, 0.2);
+
+      box-shadow:
+        0 2px 8px rgba(0, 133, 255, 0.5),
+        0 4px 12px rgba(0, 133, 255, 0.2);
+
       transform: scaleX(0);
       transform-origin: center;
-      transition: transform 0.3s ease-out;
+      transition: transform 0.3s ease;
     }
 
-    .nav__items li a:hover::after,
+    .nav__items li:hover a::after,
     .nav__items li a.active::after {
       transform: scaleX(1);
     }
+
 
     .items {
       @include flex-center;
@@ -171,6 +181,8 @@ body {
       font-size: $fs-22;
       font-weight: $fw-600;
       margin-bottom: 0.7rem;
+      position: relative;
+      z-index: 9999;
     }
 
     .continue {
@@ -182,6 +194,8 @@ body {
     .follow__btns {
       @include flex-center;
       gap: 30px;
+      position: relative;
+      z-index: 9999;
 
       .follow__btn {
         @include flex-center;
@@ -294,9 +308,8 @@ body {
 
   .studio__card:hover {
     transform: translateY(-8px) scale(1.05);
-    box-shadow:
-      0 0 0 2px #3b82f6,
-      0 20px 45px rgba(0, 0, 0, .65);
+    border: 2px solid #2563eb;
+    box-shadow: 0 0 25px rgba(37, 99, 235, 0.4);
   }
 
   .studio__card:hover img {
@@ -335,27 +348,467 @@ body {
 }
 
 .studio__card {
-  position: relative; 
+  position: relative;
   width: 200px;
-  height: 120px; 
+  height: 120px;
   overflow: hidden;
   border-radius: 12px;
   background: #1a1a1a;
 
   &__title {
-    margin-bottom: 9rem;
     z-index: 2;
     padding: 10px;
     color: white;
+    font-size: $fs-22;
+    margin-bottom: 7rem;
     font-weight: bold;
   }
 
   .genre {
-    position: absolute; 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.9;
+    object-fit: cover;
+    z-index: 1;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.new__cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+}
+
+.new__movies__title {
+  font-size: $fs-36;
+  font-weight: $fw-600;
+  color: $white;
+  margin-bottom: 1rem;
+
+  span {
+    color: #047AE0;
+  }
+}
+
+.pagination {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 7rem;
+}
+
+.pagination .page {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  background: #2f3136;
+  /* default neutral like "2" */
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.pagination .page:hover {
+  background: linear-gradient(90deg, rgba(4, 122, 224, 1) 49%, rgba(44, 157, 255, 1) 100%);
+  color: white;
+}
+
+.pagination .page.current {
+  background: linear-gradient(90deg, rgba(4, 122, 224, 1) 49%, rgba(44, 157, 255, 1) 100%);
+  color: white;
+  cursor: default;
+}
+
+.pagination .page:focus {
+  background: linear-gradient(90deg, rgba(4, 122, 224, 1) 49%, rgba(44, 157, 255, 1) 100%);
+}
+@media (max-width: 1024px) {
+
+  /* ===== Global container spacing ===== */
+  body {
+    padding: 0 20px;
+  }
+
+  /* ===== Background Troll Section ===== */
+  .background-image-troll {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    padding: 30px;
+
+    .follow__btns {
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+  }
+
+  /* ===== Watch Movies Section ===== */
+  .watch__movies {
+
+    .container {
+      flex-direction: column;
+      gap: 30px;
+      text-align: center;
+    }
+
+    .movies-image {
+      width: 280px;
+    }
+
+    .watch__movies-description {
+      font-size: 20px;
+    }
+  }
+
+  /* ===== Studio Section ===== */
+  .studio-section {
+    gap: 10px;
+  }
+
+  .studio-row {
+    gap: 18px;
+    padding: 10px 0;
+  }
+
+  .studio__card {
+    min-width: 180px;
+    height: 170px;
+  }
+
+  .studio__card img {
+    width: 65%;
+  }
+
+  .studio-nav {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+
+  /* ===== New Movies ===== */
+  .new__cards {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .new__movies__title {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  /* ===== Pagination ===== */
+  .pagination {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .pagination .page {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+
+  /* ===== Background Troll ===== */
+  .background-image-troll {
+    padding: 20px;
+    text-align: center;
+
+    .follow__title {
+      font-size: 18px;
+    }
+
+    .continue {
+      font-size: 16px;
+    }
+
+    .follow__btn {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+  }
+
+  /* ===== Watch Movies ===== */
+  .watch__movies {
+    padding: 20px 0;
+
+    .movies-image {
+      width: 220px;
+    }
+
+    .watch__movies-description {
+      font-size: 18px;
+    }
+  }
+
+  /* ===== Studio Row ===== */
+  .studio-row {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .studio__card {
+    min-width: 150px;
+    height: 150px;
+    scroll-snap-align: start;
+  }
+
+  .studio__card img {
+    width: 60%;
+  }
+
+  .studio-nav {
+    display: none; /* arrows hidden on mobile */
+  }
+
+  /* ===== Second Studio Card Version ===== */
+  .studio__card {
+    width: 160px;
+    height: 100px;
+
+    &__title {
+      font-size: 16px;
+      margin-bottom: 4rem;
+    }
+
+    .genre {
+      height: 60%;
+      object-fit: cover;
+    }
+  }
+
+  /* ===== New Cards ===== */
+  .new__cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .new__movies__title {
+    font-size: 24px;
+  }
+
+  /* ===== Pagination ===== */
+  .pagination {
+    margin-bottom: 3rem;
+  }
+
+  .pagination .page {
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 480px) {
+
+  body {
+    padding: 0 15px;
+  }
+
+  .background-image-troll {
+    padding: 15px;
+  }
+
+  .watch__movies-description {
+    font-size: 16px;
+  }
+
+  .studio__card {
+    min-width: 130px;
+    height: 130px;
+  }
+
+  .studio__card img {
+    width: 55%;
+  }
+
+  .new__movies__title {
+    font-size: 20px;
+  }
+
+  .pagination .page {
+    width: 28px;
+    height: 28px;
+  }
+}
+@media (max-width: 1024px) {
+
+  /* Hide navigation links */
+  .navbar .nav__items {
+    display: none;
+  }
+
+  /* Hide library button */
+  .navbar .items .nav__library {
+    display: none;
+  }
+
+  /* Clean search border */
+  .navbar .items .nav_search {
+    border-right: none;
+    padding: 0;
+  }
+
+  /* Align properly */
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .navbar .items {
+    gap: 18px;
+  }
+}
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 0 16px;
+    height: 64px;
+  }
+
+  /* Smaller logo text */
+  .navbar .nav-logo .logo-text {
+    font-size: 18px;
+  }
+
+  /* Smaller icons */
+  .navbar .items .nav__search,
+  .navbar .items .nav__choosen,
+  .navbar .items .sign__in {
+    width: 34px;
+    height: 34px;
+  }
+
+  /* Hide "Войти" text */
+  .navbar .items .sign__in-text {
+    display: none;
+  }
+
+  /* Make sign button circular */
+  .navbar .items .sign__in {
+    padding: 0;
+    border-radius: 50%;
+  }
+}
+/* ============================= */
+/* RESPONSIVE NAV FIX */
+/* ============================= */
+
+@media (max-width: 1024px) {
+
+  /* Hide all nav links */
+  header .navbar .nav__items {
+    display: none !important;
+  }
+
+  /* Hide library button */
+  header .navbar .nav__library {
+    display: none !important;
+  }
+
+  /* Remove search divider */
+  header .navbar .nav_search {
+    border-right: none !important;
+    padding: 0 !important;
+  }
+
+  /* Proper spacing */
+  header .navbar {
+    padding: 0 20px !important;
+    justify-content: space-between;
+  }
+
+  header .navbar .items {
+    gap: 18px !important;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  header .navbar {
+    height: 64px !important;
+    padding: 0 16px !important;
+  }
+
+  /* Smaller logo */
+  header .navbar .logo-text {
+    font-size: 18px !important;
+  }
+
+  /* Smaller icons */
+  header .navbar .nav__search,
+  header .navbar .nav__choosen,
+  header .navbar .sign__in {
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+  /* Hide sign text */
+  header .navbar .sign__in-text {
+    display: none !important;
+  }
+
+  /* Make avatar circular */
+  header .navbar .sign__in {
+    padding: 0 !important;
+    border-radius: 50% !important;
+  }
+}
+.mobile-bottom-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .mobile-bottom-nav {
+    position: fixed;
     bottom: 0;
     left: 0;
-    width: 90%;
-    object-fit: cover;
-    z-index: 1; 
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background: rgba(18, 22, 36, 0.95);
+    backdrop-filter: blur(15px);
+
+    border-top: 1px solid rgba(255,255,255,0.06);
+    z-index: 9999;
+  }
+
+  .mobile-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+
+    font-size: 12px;
+    font-weight: 500;
+    color: #8d8e94;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-item svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .mobile-item.active {
+    color: #ffffff;
+  }
+
+  body {
+    padding-bottom: 80px;
   }
 }

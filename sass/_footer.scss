@@ -142,3 +142,92 @@
     }
   }
 }
+/* =====================================
+   MOBILE FOOTER VERSION (≤768px)
+===================================== */
+
+@media (max-width: 768px) {
+
+  .footer {
+    padding: 40px 20px 100px;
+  }
+
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  /* Make columns look like simple section blocks */
+  .footer__col {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 18px;
+  }
+
+  .footer__col h4 {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .footer__col h4::after {
+    display: none; /* remove underline line */
+  }
+
+  .footer__col ul li {
+    margin-bottom: 12px;
+  }
+
+  .footer__col ul li a {
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+  }
+
+  /* Brand section */
+  .footer__brand {
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  .footer__logo h3 {
+    font-size: 20px;
+  }
+
+  .footer__desc {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+
+  .footer__copyright,
+  .footer__dev {
+    font-size: 12px;
+    opacity: 0.7;
+  }
+
+  /* Social buttons */
+  .footer__social {
+    margin-top: 20px;
+    display: flex;
+    gap: 14px;
+  }
+
+  .social svg {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+
+  /* Scroll button */
+  .footer__scrollTop {
+    right: 20px;
+    bottom: 20px;
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 576px) {
+  .footer {
+    padding: 35px 18px 90px;
+  }
+}

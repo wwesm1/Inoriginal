@@ -280,3 +280,163 @@
   color: rgba(255, 255, 255, 0.6);
 }
 
+/* =====================================
+   LARGE TABLETS (≤1024px)
+===================================== */
+@media (max-width: 1024px) {
+
+  .cards-title {
+    font-size: 28px;
+  }
+
+  .card-item {
+    flex: 0 0 200px;
+  }
+
+  .cards-nav {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+
+    &--left {
+      left: -40px;
+    }
+
+    &--right {
+      right: -40px;
+    }
+  }
+}
+
+
+/* =====================================
+   TABLETS (≤768px)
+===================================== */
+@media (max-width: 768px) {
+
+  .cards-section {
+    margin-top: 30px;
+  }
+
+  .cards-title {
+    font-size: 24px;
+  }
+
+  .cards-row {
+    gap: 16px;
+    padding: 18px 0;
+  }
+
+  .card-item {
+    flex: 0 0 170px;
+  }
+
+  .card-name {
+    font-size: 14px;
+  }
+
+  .card-meta {
+    font-size: 11px;
+  }
+
+  .cards-nav {
+    display: none; /* hide arrows on tablet */
+  }
+}
+
+
+/* =====================================
+   MOBILE (≤576px)
+===================================== */
+@media (max-width: 576px) {
+
+  .cards-title {
+    font-size: 20px;
+  }
+
+  .cards-row {
+    gap: 14px;
+  }
+
+  .card-item {
+    flex: 0 0 140px;
+  }
+
+  .card-inner {
+    border-radius: 14px;
+  }
+
+  .label {
+    font-size: 9px;
+    padding: 4px 8px;
+  }
+
+  .card-name {
+    font-size: 13px;
+  }
+
+  .score {
+    font-size: 9px;
+    padding: 2px 6px;
+  }
+
+  .card-meta {
+    font-size: 10px;
+  }
+
+  .cards-nav {
+    display: none;
+  }
+}
+
+
+/* =====================================
+   SMALL MOBILE (≤400px)
+===================================== */
+@media (max-width: 400px) {
+
+  .card-item {
+    flex: 0 0 120px;
+  }
+
+  .cards-title {
+    font-size: 18px;
+  }
+}.cards-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.card-item {
+  scroll-snap-align: start;
+}
+@media (hover: none) {
+
+  .card-item:hover {
+
+    .card-inner {
+      transform: none;
+      border-color: transparent;
+    }
+
+    .card-image {
+      transform: none;
+    }
+
+    .card-overlay {
+      opacity: 0;
+    }
+
+    .card-content {
+      transform: translateY(25px);
+    }
+
+    .card-bookmark {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+  }
+  
+}
