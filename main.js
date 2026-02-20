@@ -219,3 +219,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+const footerCols = document.querySelectorAll('.footer__col');
+
+footerCols.forEach(col => {
+  const title = col.querySelector('h4');
+
+  title.addEventListener('click', () => {
+
+    footerCols.forEach(item => {
+      if (item !== col) {
+        item.classList.remove('active');
+      }
+    });
+
+    col.classList.toggle('active');
+  });
+});
