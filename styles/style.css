@@ -1352,10 +1352,10 @@ body .studio__card.visible {
 }
 @media (max-width: 400px) {
   .card-item {
-    flex: 0 0 120px;
+    flex: 0 0 200px;
   }
   .cards-title {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 .cards-scroll {
@@ -1736,11 +1736,11 @@ body .studio__card.visible {
     font-size: 22px;
   }
   .top-card {
-    width: 130px;
-    height: 210px;
+    width: 180px;
+    height: 250px;
   }
   .top-number {
-    font-size: 85px;
+    font-size: 80px;
     left: -35px;
   }
 }
@@ -1941,8 +1941,8 @@ body .studio__card.visible {
     font-size: 20px;
   }
   .card {
-    width: 150px;
-    height: 150px;
+    width: 220px;
+    height: 220px;
   }
 }
 @media (hover: none) {
