@@ -22,11 +22,11 @@ This repo does not currently include backend logic — it’s purely frontend.<b
 ✔ No backend — frontend only<br/>
 
 📁 Project Structure<br/>
-├── assets/         # Images / media<br/>
-├── pages/          # HTML content pages (if any)<br/>
-├── sass/           # SCSS style source files<br/>
-├── styles/         # Compiled CSS<br/>
-├── index.html      # Main page<br/>
-├── main.js         # Scripts<br/>
-├── package.json    # Dependencies & scripts<br/>
+├── assets/<br/>
+├── pages/<br/>
+├── sass/<br/>
+├── styles/<br/>
+├── index.html<br/>
+├── main.js<br/>
+├── package.json<br/>
 └── .gitignore
