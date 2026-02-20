@@ -191,15 +191,11 @@ document.querySelectorAll('.studio-section, .cards-slider').forEach(slider => {
   }
 });
 
-// Select all nav links
 const navLinks = document.querySelectorAll('.nav__items li a');
 
-// Get current page filename (e.g., 'new.html')
 const currentPage = window.location.pathname.split('/').pop();
 
-// Loop through nav links
 navLinks.forEach(link => {
-  // Get the filename part of href (e.g., 'new.html')
   const linkPage = link.getAttribute('href').split('/').pop();
 
   if (linkPage === currentPage) {
