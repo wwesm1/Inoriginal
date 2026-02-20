@@ -484,7 +484,6 @@ body .studio__card.visible {
   border: none;
   border-radius: 8px;
   background: #2f3136;
-  /* default neutral like "2" */
   color: white;
   cursor: pointer;
   transition: all 0.3s ease;
