@@ -56,7 +56,6 @@ body {
       color: $white;
     }
 
-    /* underline effect */
     .nav__items li a::after {
       content: "";
       position: absolute;
@@ -182,7 +181,7 @@ body {
       font-weight: $fw-600;
       margin-bottom: 0.7rem;
       position: relative;
-      z-index: 9999;
+      z-index: 9998;
     }
 
     .continue {
@@ -195,7 +194,7 @@ body {
       @include flex-center;
       gap: 30px;
       position: relative;
-      z-index: 9999;
+      z-index: 9998;
 
       .follow__btn {
         @include flex-center;
@@ -601,6 +600,7 @@ body {
 
   .background-image-troll {
     padding: 15px;
+    
   }
 
   .watch__movies-description {
@@ -775,4 +775,6 @@ body {
   body {
     padding-bottom: 80px;
   }
+
 }
+

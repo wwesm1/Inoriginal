@@ -171,9 +171,6 @@ body .navbar .nav__items li:hover a,
 body .navbar .nav__items li a.active {
   color: #fff;
 }
-body .navbar {
-  /* underline effect */
-}
 body .navbar .nav__items li a::after {
   content: "";
   position: absolute;
@@ -286,7 +283,7 @@ body .background-image-troll .follow__title {
   font-weight: 600;
   margin-bottom: 0.7rem;
   position: relative;
-  z-index: 9999;
+  z-index: 9998;
 }
 body .background-image-troll .continue {
   color: #fff;
@@ -299,7 +296,7 @@ body .background-image-troll .follow__btns {
   justify-content: center;
   gap: 30px;
   position: relative;
-  z-index: 9999;
+  z-index: 9998;
 }
 body .background-image-troll .follow__btns .follow__btn {
   display: flex;
@@ -1352,10 +1349,10 @@ body .studio__card.visible {
 }
 @media (max-width: 400px) {
   .card-item {
-    flex: 0 0 120px;
+    flex: 0 0 200px;
   }
   .cards-title {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 .cards-scroll {
@@ -1736,11 +1733,11 @@ body .studio__card.visible {
     font-size: 22px;
   }
   .top-card {
-    width: 130px;
-    height: 210px;
+    width: 180px;
+    height: 250px;
   }
   .top-number {
-    font-size: 85px;
+    font-size: 80px;
     left: -35px;
   }
 }
@@ -1941,8 +1938,8 @@ body .studio__card.visible {
     font-size: 20px;
   }
   .card {
-    width: 150px;
-    height: 150px;
+    width: 220px;
+    height: 220px;
   }
 }
 @media (hover: none) {

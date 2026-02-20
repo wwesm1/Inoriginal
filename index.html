@@ -18,11 +18,9 @@
       </a>
       <ul class="nav__items">
         <li>
-          
           <a href="./pages/new.html">Новинки</a>
         </li>
         <li>
-        
           <a href="./pages/movies.html">Фильмы</a>
         </li>
         <li>
@@ -1546,7 +1544,7 @@
         </div>
     </section>
 
-    <section class="collections ">
+    <section class="collections">
 
 
       <div class="cards-header">
@@ -1561,17 +1559,12 @@
         <button class="collections-nav left" onclick="scrollLeft()">
           &#10094;
         </button>
-  <div class="collections-wrapper">
-
-
-    <button class="studio-nav left">❮</button>
-
-    <div class="collections__grid">
-
 
         <div class="collections-wrapper">
-    
-      
+          <!-- LEFT ARROW -->
+          <button class="studio-nav left">❮</button>
+
+          <!-- SCROLL CONTAINER -->
           <div class="collections__grid">
 
             <div class="card">
@@ -1677,111 +1670,80 @@
             </div>
 
           </div>
+
+          <!-- RIGHT ARROW -->
           <button class="studio-nav right">❯</button>
+
         </div>
-      <div class="card">
-        <img src="assets/svg/alone.jpeg" alt="Home Alone" />
-        <div class="card__overlay"></div>
-        <div class="card__content">
-          <h3>Home Alone</h3>
-          <span>Collection</span>
+
+    </section>
+    </section>
+    <section class="studios container">
+      <div class="cards-header">
+        <h2 class="cards-title">
+          Жанры
+          <span class="cards-arrow">›</span>
+        </h2>
+      </div>
+      <div class="studio-section">
+
+        <button class="studio-nav left">❮</button>
+
+        <div class="studio-row">
+
+          <div class="studio__card">
+            <p class="studio__card__title">Триллер</p>
+            <img src="./assets/images/thriller-genre.jpg" class="genre">
+          </div>
+
+          <div class="studio__card">
+            <p class="studio__card__title">Приключение</p>
+            <img src="./assets/images/adventure-genre.avif" class="genre">
+          </div>
+
+          <div class="studio__card">
+            <p class="studio__card__title">Фантастика</p>
+            <img src="./assets/images/fantasy-genre.avif" class="genre">
+          </div>
+
+          <div class="studio__card">
+            <p class="studio__card__title">Боевик</p>
+            <img src="./assets/images/action-genre.jpg" class="genre">
+          </div>
+
+          <div class="studio__card">
+            <p class="studio__card__title">Мелодрама</p>
+            <img src="./assets/images/melodrama-genre.jpg" class="genre">
+          </div>
+
+          <div class="studio__card">
+            <p class="studio__card__title">Криминальное</p>
+            <img src="./assets/images/criminal-genre.jpg" class="genre">
+          </div>
+
+          <div class="studio__card">
+            <p class="studio__card__title">Вестерны</p>
+            <img src="./assets/images/westren-genre.jfif" class="genre">
+          </div>
+
         </div>
+
+        <button class="studio-nav right">❯</button>
+
       </div>
 
-      <div class="card">
-        <img src="assets/svg/it.jpg" alt="IT" />
-        <div class="card__overlay"></div>
-        <div class="card__content">
-          <h3>IT</h3>
-          <span>Collection</span>
-        </div>
-      </div>
 
-      <div class="card">
-        <img src="assets/svg/dune.jpg" alt="Dune" />
-        <div class="card__overlay"></div>
-        <div class="card__content">
-          <h3>Dune</h3>
-          <span>Collection</span>
-        </div>
-      </div>
 
-      <div class="card">
-        <img src="assets/images/deadpool.jpg" alt="Deadpool" />
-        <div class="card__overlay"></div>
-        <div class="card__content">
-          <h3>Deadpool</h3>
-          <span>Collection</span>
-        </div>
-      </div>
 
-      <div class="card">
-        <img src="assets/svg/spider.jpg" alt="Spider Man" />
-        <div class="card__overlay"></div>
-        <div class="card__content">
-          <h3>Spider Man</h3>
-          <span>Collection</span>
-        </div>
-      </div>
-      <div class="card">
-        <img src="assets/images/specture.webp" alt="Spider Man" />
-        <div class="card__overlay"></div>
-        <div class="card__content">
-          <h3>007</h3>
-          <span>Collection</span>
-        </div>
-      </div>
-      <div class="card">
-        <img src="assets/images/throne.jpg" alt="Spider Man" />
-        <div class="card__overlay"></div>
-        <div class="card__content">
-          <h3>game of throne</h3>
-          <span>Collection</span>
-        </div>
-      </div>
-      <div class="card">
-        <img src="assets/images/bat.jpg" alt="Spider Man" />
-        <div class="card__overlay"></div>
-        <div class="card__content">
-          <h3>batman</h3>
-          <span>Collection</span>
-        </div>
-      </div>
-      <div class="card">
-        <img src="assets/images/matrix.jpg" alt="Spider Man" />
-        <div class="card__overlay"></div>
-        <div class="card__content">
-          <h3>Matrix</h3>
-          <span>Collection</span>
-        </div>
-      </div>
-      <div class="card">
-        <img src="assets/images/x.jpg" alt="Spider Man" />
-        <div class="card__overlay"></div>
-        <div class="card__content">
-          <h3>X-men</h3>
-          <span>Collection</span>
-        </div>
-      </div>
-      <div class="card">
-        <img src="assets/images/op.jpg" alt="Spider Man" />
-        <div class="card__overlay"></div>
-        <div class="card__content">
-          <h3>Fast furious </h3>
-          <span>Collection</span>
-        </div>
-      </div>
 
+
+    </section>
+
+
+    <button class="collections-nav right" onclick="scrollRight()">
+      &#10095;
+    </button>
     </div>
-
-    <button class="studio-nav right">❯</button>
-
-  </div>
-
-</section>
-
-
-      </div>
     </section>
     <section class="studios container">
       <div class="cards-header">
@@ -1842,143 +1804,89 @@
 
       </div>
 
-       <section class="studios container">
-      <div class="cards-header">
-        <h2 class="cards-title">
-          Жанры
-          <span class="cards-arrow">›</span>
-        </h2>
-      </div>
-      <div class="studio-section">
-
-        <button class="studio-nav left">❮</button>
-
-        <div class="studio-row">
-
-          <div class="studio__card">
-            <p class="studio__card__title">Триллер</p>
-            <img src="./assets/images/thriller-genre.jpg" class="genre">
-          </div>
-
-          <div class="studio__card">
-            <p class="studio__card__title">Приключение</p>
-            <img src="./assets/images/adventure-genre.avif" class="genre">
-          </div>
-
-          <div class="studio__card">
-            <p class="studio__card__title">Фантастика</p>
-            <img src="./assets/images/fantasy-genre.avif" class="genre">
-          </div>
-
-          <div class="studio__card">
-            <p class="studio__card__title">Боевик</p>
-            <img src="./assets/images/action-genre.jpg" class="genre">
-          </div>
-
-          <div class="studio__card">
-            <p class="studio__card__title">Мелодрама</p>
-            <img src="./assets/images/melodrama-genre.jpg" class="genre">
-          </div>
-
-          <div class="studio__card">
-            <p class="studio__card__title">Криминальное</p>
-            <img src="./assets/images/criminal-genre.jpg" class="genre">
-          </div>
-
-          <div class="studio__card">
-            <p class="studio__card__title">Вестерны</p>
-            <img src="./assets/images/westren-genre.jfif" class="genre">
-          </div>
-
-        </div>
-
-        <button class="studio-nav right">❯</button>
-
-      </div>
-    </section>
-
-
-    
-    </div>
-    </section>
   </main>
 
-<footer class="footer">
+  <footer class="footer">
 
-  <div class="footer__container">
+    <div class="footer__container container">
 
-    <div class="footer__brand">
-      <div class="footer__logo">
-        <span class="footer__icon">
-          <img src="assets/svg/inoriginal-logo.svg" alt="">
-        </span>
-        <h3>INORIGINAL</h3>
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <span class="footer__icon">
+            <img src="assets/svg/inoriginal-logo.svg" alt="">
+          </span>
+          <h3>INORIGINAL</h3>
+        </div>
+
+        <p class="footer__desc">
+          Изучай английский язык по фильмам и сериалам в оригинале
+          с интерактивными русскими, английскими или двойными субтитрами.
+        </p>
+
+        <p class="footer__copyright">
+          Материалы предоставляются только для ознакомления © 2021–2026
+          inoriginal.net
+        </p>
+
+        <p class="footer__dev">
+          Разработал с любовью <a href="#">A.Kokorin</a>
+        </p>
+
+        <div class="footer__social">
+          <a href="#" class="social vk">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path fill="#0077FF"
+                d="M2.394 0h19.212C22.929 0 24 1.071 24 2.394v19.212c0 1.323-1.071 2.394-2.394 2.394H2.394C1.071 24 0 22.929 0 21.606V2.394C0 1.071 1.071 0 2.394 0z" />
+              <path fill="#FFF"
+                d="M13.162 18.994c-6.098 0-9.57-4.172-9.715-11.104h3.04c.1 5.093 2.344 7.243 4.12 7.69v-7.69h2.86v4.394c1.748-.188 3.593-2.18 4.212-4.394h2.86a11.182 11.182 0 01-3.87 5.597c1.372.645 3.12 2.397 3.99 5.507h-3.132c-.683-2.13-2.384-3.773-4.12-3.95v3.95h-1.245z" />
+            </svg>
+          </a>
+          <a href="#" class="social tg">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path fill="#24A1DE"
+                d="M2.394 0h19.212C22.929 0 24 1.071 24 2.394v19.212c0 1.323-1.071 2.394-2.394 2.394H2.394C1.071 24 0 22.929 0 21.606V2.394C0 1.071 1.071 0 2.394 0z" />
+              <path fill="#FFF"
+                d="M18.384 5.803c.117.217.034.467-.02.573l-2.454 11.583c-.167.75-.62.937-1.25.583l-3.73-2.75-1.8 1.735c-.2.2-.367.367-.75.367l.266-3.784 6.89-6.218c.3-.266-.065-.415-.467-.148l-8.514 5.36-3.667-1.146c-.8-.25-.813-.8.167-1.183l14.333-5.524c.66-.25 1.238.15 1.042.93z" />
+            </svg>
+          </a>
+        </div>
       </div>
 
-      <p class="footer__desc">
-        Изучай английский язык по фильмам и сериалам в оригинале
-        с интерактивными русскими, английскими или двойными субтитрами.
-      </p>
-
-      <p class="footer__copyright">
-        Материалы предоставляются только для ознакомления © 2021–2026
-        inoriginal.net
-      </p>
-
-      <p class="footer__dev">
-        Разработал с любовью <a href="#">A.Kokorin</a>
-      </p>
-
-      <div class="footer__social">
-        <a href="#" class="social vk">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-  <path fill="#0077FF" d="M2.394 0h19.212C22.929 0 24 1.071 24 2.394v19.212c0 1.323-1.071 2.394-2.394 2.394H2.394C1.071 24 0 22.929 0 21.606V2.394C0 1.071 1.071 0 2.394 0z"/>
-  <path fill="#FFF" d="M13.162 18.994c-6.098 0-9.57-4.172-9.715-11.104h3.04c.1 5.093 2.344 7.243 4.12 7.69v-7.69h2.86v4.394c1.748-.188 3.593-2.18 4.212-4.394h2.86a11.182 11.182 0 01-3.87 5.597c1.372.645 3.12 2.397 3.99 5.507h-3.132c-.683-2.13-2.384-3.773-4.12-3.95v3.95h-1.245z"/>
-</svg>
-        </a>
-        <a href="#" class="social tg">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-  <path fill="#24A1DE" d="M2.394 0h19.212C22.929 0 24 1.071 24 2.394v19.212c0 1.323-1.071 2.394-2.394 2.394H2.394C1.071 24 0 22.929 0 21.606V2.394C0 1.071 1.071 0 2.394 0z"/>
-  <path fill="#FFF" d="M18.384 5.803c.117.217.034.467-.02.573l-2.454 11.583c-.167.75-.62.937-1.25.583l-3.73-2.75-1.8 1.735c-.2.2-.367.367-.75.367l.266-3.784 6.89-6.218c.3-.266-.065-.415-.467-.148l-8.514 5.36-3.667-1.146c-.8-.25-.813-.8.167-1.183l14.333-5.524c.66-.25 1.238.15 1.042.93z"/>
-</svg>
-        </a>
+      <div class="footer__col">
+        <h4>Inoriginal</h4>
+        <ul>
+          <li><a href="#">Подписка Inoriginal+</a></li>
+          <li><a href="#">О проекте</a></li>
+        </ul>
       </div>
+
+      <div class="footer__col">
+        <h4>Помощь</h4>
+        <ul>
+          <li><a href="#">Вопросы и ответы (FAQ)</a></li>
+          <li><a href="#">Служба поддержки</a></li>
+          <li><a href="#">Чат Вконтакте</a></li>
+          <li><a href="#">Чат Telegram</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Другое</h4>
+        <ul>
+          <li><a href="#">Заявка на удаление контента</a></li>
+          <li><a href="#">Правообладателям</a></li>
+          <li><a href="#">Пользовательское соглашение</a></li>
+          <li><a href="#">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+
     </div>
 
-    <div class="footer__col">
-      <h4>Inoriginal</h4>
-      <ul>
-        <li><a href="#">Подписка Inoriginal+</a></li>
-        <li><a href="#">О проекте</a></li>
-      </ul>
-    </div>
-
-    <div class="footer__col">
-      <h4>Помощь</h4>
-      <ul>
-        <li><a href="#">Вопросы и ответы (FAQ)</a></li>
-        <li><a href="#">Служба поддержки</a></li>
-        <li><a href="#">Чат Вконтакте</a></li>
-        <li><a href="#">Чат Telegram</a></li>
-      </ul>
-    </div>
-
-    <div class="footer__col">
-      <h4>Другое</h4>
-      <ul>
-        <li><a href="#">Заявка на удаление контента</a></li>
-        <li><a href="#">Правообладателям</a></li>
-        <li><a href="#">Пользовательское соглашение</a></li>
-        <li><a href="#">Политика конфиденциальности</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <button class="footer__scrollTop">↑</button>
+  
 
 </footer>
-</section>
-  
+
+
 
 
 
