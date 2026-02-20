@@ -202,25 +202,22 @@ navLinks.forEach(link => {
   // Get the filename part of href (e.g., 'new.html')
   const linkPage = link.getAttribute('href').split('/').pop();
 
-  // Compare and add 'active' class if it matches
   if (linkPage === currentPage) {
     link.classList.add('active');
   }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Select all nav links
+ 
   const navLinks = document.querySelectorAll('.nav__items li a');
 
-  // Get current page filename (e.g., 'new.html')
   const currentPage = window.location.pathname.split("/").pop();
 
-  // Loop through nav links
   navLinks.forEach(link => {
-    // Extract just the filename from href
+
     const linkPage = link.getAttribute('href').split('/').pop();
 
-    // Add 'active' class if it matches current page
+  
     if (linkPage === currentPage) {
       link.classList.add('active');
     }

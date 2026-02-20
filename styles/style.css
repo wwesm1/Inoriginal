@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "Open Sans";
   src: url("../assets/fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
@@ -506,11 +505,9 @@ body .studio__card.visible {
 }
 
 @media (max-width: 1024px) {
-  /* ===== Global container spacing ===== */
   body {
     padding: 0 20px;
   }
-  /* ===== Background Troll Section ===== */
   .background-image-troll {
     flex-direction: column;
     align-items: flex-start;
@@ -521,7 +518,6 @@ body .studio__card.visible {
     gap: 15px;
     flex-wrap: wrap;
   }
-  /* ===== Watch Movies Section ===== */
   .watch__movies .container {
     flex-direction: column;
     gap: 30px;
@@ -533,7 +529,6 @@ body .studio__card.visible {
   .watch__movies .watch__movies-description {
     font-size: 20px;
   }
-  /* ===== Studio Section ===== */
   .studio-section {
     gap: 10px;
   }
@@ -553,7 +548,6 @@ body .studio__card.visible {
     height: 42px;
     font-size: 18px;
   }
-  /* ===== New Movies ===== */
   .new__cards {
     justify-content: center;
     gap: 20px;
@@ -562,7 +556,6 @@ body .studio__card.visible {
     font-size: 28px;
     text-align: center;
   }
-  /* ===== Pagination ===== */
   .pagination {
     flex-wrap: wrap;
     gap: 6px;
@@ -574,7 +567,6 @@ body .studio__card.visible {
   }
 }
 @media (max-width: 768px) {
-  /* ===== Background Troll ===== */
   .background-image-troll {
     padding: 20px;
     text-align: center;
@@ -589,7 +581,6 @@ body .studio__card.visible {
     padding: 8px 12px;
     font-size: 14px;
   }
-  /* ===== Watch Movies ===== */
   .watch__movies {
     padding: 20px 0;
   }
@@ -599,7 +590,6 @@ body .studio__card.visible {
   .watch__movies .watch__movies-description {
     font-size: 18px;
   }
-  /* ===== Studio Row ===== */
   .studio-row {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -613,9 +603,8 @@ body .studio__card.visible {
     width: 60%;
   }
   .studio-nav {
-    display: none; /* arrows hidden on mobile */
+    display: none;
   }
-  /* ===== Second Studio Card Version ===== */
   .studio__card {
     width: 160px;
     height: 100px;
@@ -628,7 +617,6 @@ body .studio__card.visible {
     height: 60%;
     object-fit: cover;
   }
-  /* ===== New Cards ===== */
   .new__cards {
     flex-direction: column;
     align-items: center;
@@ -636,7 +624,6 @@ body .studio__card.visible {
   .new__movies__title {
     font-size: 24px;
   }
-  /* ===== Pagination ===== */
   .pagination {
     margin-bottom: 3rem;
   }
@@ -672,20 +659,16 @@ body .studio__card.visible {
   }
 }
 @media (max-width: 1024px) {
-  /* Hide navigation links */
   .navbar .nav__items {
     display: none;
   }
-  /* Hide library button */
   .navbar .items .nav__library {
     display: none;
   }
-  /* Clean search border */
   .navbar .items .nav_search {
     border-right: none;
     padding: 0;
   }
-  /* Align properly */
   .navbar {
     justify-content: space-between;
   }
@@ -698,45 +681,34 @@ body .studio__card.visible {
     padding: 0 16px;
     height: 64px;
   }
-  /* Smaller logo text */
   .navbar .nav-logo .logo-text {
     font-size: 18px;
   }
-  /* Smaller icons */
   .navbar .items .nav__search,
   .navbar .items .nav__choosen,
   .navbar .items .sign__in {
     width: 34px;
     height: 34px;
   }
-  /* Hide "Войти" text */
   .navbar .items .sign__in-text {
     display: none;
   }
-  /* Make sign button circular */
   .navbar .items .sign__in {
     padding: 0;
     border-radius: 50%;
   }
 }
-/* ============================= */
-/* RESPONSIVE NAV FIX */
-/* ============================= */
 @media (max-width: 1024px) {
-  /* Hide all nav links */
   header .navbar .nav__items {
     display: none !important;
   }
-  /* Hide library button */
   header .navbar .nav__library {
     display: none !important;
   }
-  /* Remove search divider */
   header .navbar .nav_search {
     border-right: none !important;
     padding: 0 !important;
   }
-  /* Proper spacing */
   header .navbar {
     padding: 0 20px !important;
     justify-content: space-between;
@@ -750,22 +722,18 @@ body .studio__card.visible {
     height: 64px !important;
     padding: 0 16px !important;
   }
-  /* Smaller logo */
   header .navbar .logo-text {
     font-size: 18px !important;
   }
-  /* Smaller icons */
   header .navbar .nav__search,
   header .navbar .nav__choosen,
   header .navbar .sign__in {
     width: 34px !important;
     height: 34px !important;
   }
-  /* Hide sign text */
   header .navbar .sign__in-text {
     display: none !important;
   }
-  /* Make avatar circular */
   header .navbar .sign__in {
     padding: 0 !important;
     border-radius: 50% !important;
@@ -1308,9 +1276,6 @@ body .studio__card.visible {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* =====================================
-   LARGE TABLETS (≤1024px)
-===================================== */
 @media (max-width: 1024px) {
   .cards-title {
     font-size: 28px;
@@ -1330,9 +1295,6 @@ body .studio__card.visible {
     right: -40px;
   }
 }
-/* =====================================
-   TABLETS (≤768px)
-===================================== */
 @media (max-width: 768px) {
   .cards-section {
     margin-top: 30px;
@@ -1354,12 +1316,9 @@ body .studio__card.visible {
     font-size: 11px;
   }
   .cards-nav {
-    display: none; /* hide arrows on tablet */
+    display: none;
   }
 }
-/* =====================================
-   MOBILE (≤576px)
-===================================== */
 @media (max-width: 576px) {
   .cards-title {
     font-size: 20px;
@@ -1391,9 +1350,6 @@ body .studio__card.visible {
     display: none;
   }
 }
-/* =====================================
-   SMALL MOBILE (≤400px)
-===================================== */
 @media (max-width: 400px) {
   .card-item {
     flex: 0 0 120px;
@@ -1890,9 +1846,6 @@ body .studio__card.visible {
   right: -25px;
 }
 
-/* =====================================
-   LARGE TABLETS (≤1200px)
-===================================== */
 @media (max-width: 1200px) {
   .collections {
     padding: 50px 60px;
@@ -1917,9 +1870,6 @@ body .studio__card.visible {
     right: -15px;
   }
 }
-/* =====================================
-   TABLETS (≤992px)
-===================================== */
 @media (max-width: 992px) {
   .collections {
     padding: 45px 40px;
@@ -1947,12 +1897,9 @@ body .studio__card.visible {
     font-size: 11px;
   }
   .studio-nav {
-    display: none; /* Hide arrows on tablet */
+    display: none;
   }
 }
-/* =====================================
-   MOBILE (≤768px)
-===================================== */
 @media (max-width: 768px) {
   .collections {
     padding: 40px 20px;
@@ -1986,9 +1933,6 @@ body .studio__card.visible {
     display: none;
   }
 }
-/* =====================================
-   SMALL MOBILE (≤400px)
-===================================== */
 @media (max-width: 400px) {
   .collections {
     padding: 35px 16px;
@@ -2152,9 +2096,6 @@ body .studio__card.visible {
   background: #1d4ed8;
 }
 
-/* =====================================
-   MOBILE FOOTER VERSION (≤768px)
-===================================== */
 @media (max-width: 768px) {
   .footer {
     padding: 40px 20px 100px;
@@ -2164,7 +2105,6 @@ body .studio__card.visible {
     flex-direction: column;
     gap: 28px;
   }
-  /* Make columns look like simple section blocks */
   .footer__col {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     padding-bottom: 18px;
@@ -2174,7 +2114,7 @@ body .studio__card.visible {
     margin-bottom: 16px;
   }
   .footer__col h4::after {
-    display: none; /* remove underline line */
+    display: none;
   }
   .footer__col ul li {
     margin-bottom: 12px;
@@ -2183,7 +2123,6 @@ body .studio__card.visible {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.7);
   }
-  /* Brand section */
   .footer__brand {
     margin-top: 20px;
     text-align: left;
@@ -2201,7 +2140,6 @@ body .studio__card.visible {
     font-size: 12px;
     opacity: 0.7;
   }
-  /* Social buttons */
   .footer__social {
     margin-top: 20px;
     display: flex;
@@ -2212,7 +2150,6 @@ body .studio__card.visible {
     height: 42px;
     border-radius: 12px;
   }
-  /* Scroll button */
   .footer__scrollTop {
     right: 20px;
     bottom: 20px;

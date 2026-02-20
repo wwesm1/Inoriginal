@@ -431,12 +431,10 @@ body {
 }
 @media (max-width: 1024px) {
 
-  /* ===== Global container spacing ===== */
   body {
     padding: 0 20px;
   }
 
-  /* ===== Background Troll Section ===== */
   .background-image-troll {
     flex-direction: column;
     align-items: flex-start;
@@ -449,7 +447,6 @@ body {
     }
   }
 
-  /* ===== Watch Movies Section ===== */
   .watch__movies {
 
     .container {
@@ -467,7 +464,6 @@ body {
     }
   }
 
-  /* ===== Studio Section ===== */
   .studio-section {
     gap: 10px;
   }
@@ -491,8 +487,6 @@ body {
     height: 42px;
     font-size: 18px;
   }
-
-  /* ===== New Movies ===== */
   .new__cards {
     justify-content: center;
     gap: 20px;
@@ -503,7 +497,6 @@ body {
     text-align: center;
   }
 
-  /* ===== Pagination ===== */
   .pagination {
     flex-wrap: wrap;
     gap: 6px;
@@ -517,7 +510,6 @@ body {
 }
 @media (max-width: 768px) {
 
-  /* ===== Background Troll ===== */
   .background-image-troll {
     padding: 20px;
     text-align: center;
@@ -536,7 +528,6 @@ body {
     }
   }
 
-  /* ===== Watch Movies ===== */
   .watch__movies {
     padding: 20px 0;
 
@@ -549,7 +540,6 @@ body {
     }
   }
 
-  /* ===== Studio Row ===== */
   .studio-row {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -566,10 +556,9 @@ body {
   }
 
   .studio-nav {
-    display: none; /* arrows hidden on mobile */
+    display: none; 
   }
 
-  /* ===== Second Studio Card Version ===== */
   .studio__card {
     width: 160px;
     height: 100px;
@@ -585,7 +574,6 @@ body {
     }
   }
 
-  /* ===== New Cards ===== */
   .new__cards {
     flex-direction: column;
     align-items: center;
@@ -595,7 +583,6 @@ body {
     font-size: 24px;
   }
 
-  /* ===== Pagination ===== */
   .pagination {
     margin-bottom: 3rem;
   }
@@ -640,23 +627,18 @@ body {
 }
 @media (max-width: 1024px) {
 
-  /* Hide navigation links */
   .navbar .nav__items {
     display: none;
   }
 
-  /* Hide library button */
   .navbar .items .nav__library {
     display: none;
   }
-
-  /* Clean search border */
   .navbar .items .nav_search {
     border-right: none;
     padding: 0;
   }
 
-  /* Align properly */
   .navbar {
     justify-content: space-between;
   }
@@ -671,13 +653,10 @@ body {
     padding: 0 16px;
     height: 64px;
   }
-
-  /* Smaller logo text */
   .navbar .nav-logo .logo-text {
     font-size: 18px;
   }
 
-  /* Smaller icons */
   .navbar .items .nav__search,
   .navbar .items .nav__choosen,
   .navbar .items .sign__in {
@@ -685,40 +664,31 @@ body {
     height: 34px;
   }
 
-  /* Hide "Войти" text */
   .navbar .items .sign__in-text {
     display: none;
   }
 
-  /* Make sign button circular */
   .navbar .items .sign__in {
     padding: 0;
     border-radius: 50%;
   }
 }
-/* ============================= */
-/* RESPONSIVE NAV FIX */
-/* ============================= */
 
 @media (max-width: 1024px) {
 
-  /* Hide all nav links */
   header .navbar .nav__items {
     display: none !important;
   }
 
-  /* Hide library button */
   header .navbar .nav__library {
     display: none !important;
   }
 
-  /* Remove search divider */
   header .navbar .nav_search {
     border-right: none !important;
     padding: 0 !important;
   }
 
-  /* Proper spacing */
   header .navbar {
     padding: 0 20px !important;
     justify-content: space-between;
@@ -737,25 +707,20 @@ body {
     padding: 0 16px !important;
   }
 
-  /* Smaller logo */
   header .navbar .logo-text {
     font-size: 18px !important;
   }
 
-  /* Smaller icons */
   header .navbar .nav__search,
   header .navbar .nav__choosen,
   header .navbar .sign__in {
     width: 34px !important;
     height: 34px !important;
   }
-
-  /* Hide sign text */
   header .navbar .sign__in-text {
     display: none !important;
   }
 
-  /* Make avatar circular */
   header .navbar .sign__in {
     padding: 0 !important;
     border-radius: 50% !important;
