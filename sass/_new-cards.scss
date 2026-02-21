@@ -1,5 +1,3 @@
-
-
 .cards-section {
   position: relative;
   margin-top: 40px;
@@ -42,7 +40,7 @@
 .cards-scroll {
   overflow-x: visible;
   overflow-x: auto;
-  overflow-y: visible;   
+  overflow-y: visible;
   scroll-behavior: smooth;
 
   scrollbar-width: none;
@@ -67,14 +65,14 @@
 
 .cards-nav {
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
+  transform: scale(1.3);
   width: 56px;
   height: 56px;
   border-radius: 50%;
   border: none;
-  background: rgba(18, 22, 35, 0.95);
-  backdrop-filter: blur(6px);
+  background: transparent;
   color: #ffffff;
   font-size: 28px;
   cursor: pointer;
@@ -84,15 +82,16 @@
   align-items: center;
   justify-content: center;
 
-  transition: 0.25s ease;
+  transition: 0.3s ease;
 
   &:hover {
-    background: #0094ff;
-    transform: translateY(-50%) scale(1.1);
+    transform: translateY(-50%);
+    transform: scale(1.8);
   }
 
   &:active {
-    transform: translateY(-50%) scale(0.95);
+    transform: translateY(-50%);
+    transform: scale(1.6);
   }
 
   &:disabled {
@@ -121,7 +120,7 @@
     .card-inner {
       transform: translateY(-8px) scale(1.05);
       border-color: #0094ff;
-     
+
     }
 
     .card-image {
@@ -152,8 +151,8 @@
   border: 2px solid transparent;
 
   transition: transform 0.35s ease,
-              box-shadow 0.35s ease,
-              border-color 0.35s ease;
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
 }
 
 .card-image {
@@ -184,25 +183,22 @@
   backdrop-filter: blur(6px);
 
   &--purple {
-    background: linear-gradient(
-      135deg,
-      #c84dff 0%,
-      #a000ff 50%,
-      #7b00ff 100%
-    );
+    background: linear-gradient(135deg,
+        #c84dff 0%,
+        #a000ff 50%,
+        #7b00ff 100%);
     box-shadow: 0 4px 12px rgba(160, 0, 255, 0.4);
   }
 
   &--blue {
-    background: linear-gradient(
-      135deg,
-      #4dc4ff 0%,
-      #0094ff 50%,
-      #0066ff 100%
-    );
+    background: linear-gradient(135deg,
+        #4dc4ff 0%,
+        #0094ff 50%,
+        #0066ff 100%);
     box-shadow: 0 4px 12px rgba(0, 148, 255, 0.4);
   }
 }
+
 .card-bookmark {
   position: absolute;
   top: 14px;
@@ -227,12 +223,10 @@
   opacity: 0;
   transition: opacity 0.35s ease;
 
-  background: linear-gradient(
-    180deg,
-    rgba(12, 16, 25, 0.1) 0%,
-    rgba(12, 16, 25, 0.75) 60%,
-    rgba(12, 16, 25, 0.95) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(12, 16, 25, 0.1) 0%,
+      rgba(12, 16, 25, 0.75) 60%,
+      rgba(12, 16, 25, 0.95) 100%);
 }
 
 .card-content {
@@ -276,6 +270,7 @@
   font-size: 12px;
   color: rgba(255, 255, 255, 0.6);
 }
+
 @media (max-width: 1024px) {
 
   .cards-title {
@@ -329,7 +324,7 @@
   }
 
   .cards-nav {
-    display: none; 
+    display: none;
   }
 }
 
@@ -383,7 +378,9 @@
   .cards-title {
     font-size: 20px;
   }
-}.cards-scroll {
+}
+
+.cards-scroll {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
@@ -393,6 +390,7 @@
 .card-item {
   scroll-snap-align: start;
 }
+
 @media (hover: none) {
 
   .card-item:hover {
@@ -419,5 +417,5 @@
       transform: translateY(-6px);
     }
   }
-  
+
 }
