@@ -8,6 +8,10 @@
     font-weight: 700;
     color: aliceblue;
   }
+
+  .cards-header {
+    margin-bottom: -2rem;
+  }
 }
 
 .collections-wrapper {
@@ -90,7 +94,6 @@
 .studio-nav {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   width: 52px;
   height: 52px;
   border-radius: 50%;
@@ -108,6 +111,9 @@
     right: -25px;
   }
 }
+
+.studio-nav.left{ left:0; }
+.studio-nav.right{ right:0; }
 @media (max-width: 1200px) {
 
   .collections {

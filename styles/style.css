@@ -350,7 +350,7 @@ body .studio-section {
 }
 body .studio-row {
   display: flex;
-  gap: 24px;
+  gap: 40px;
   overflow-x: auto;
   scroll-behavior: smooth;
   padding: 20px;
@@ -427,6 +427,7 @@ body .studio__card.visible {
   width: 200px;
   height: 120px;
   overflow: hidden;
+  margin-left: -1rem;
   border-radius: 12px;
   background: #1a1a1a;
 }
@@ -1393,11 +1394,10 @@ body .studio__card.visible {
 }
 
 .top-title {
-  font-size: 48px;
+  font-size: 37px;
   font-weight: 800;
   color: #fff;
-  margin-bottom: 100px;
-  padding-left: 120px;
+  margin-bottom: 10px;
 }
 .top-title span {
   color: #2f8cff;
@@ -1407,8 +1407,6 @@ body .studio__card.visible {
 .top-row {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding-left: 160px;
   position: relative;
 }
 
@@ -1421,9 +1419,9 @@ body .studio__card.visible {
 
 .top-number {
   position: absolute;
-  left: -180px;
+  left: -100px;
   bottom: 19px;
-  font-size: 360px;
+  font-size: 300px;
   font-weight: 900;
   line-height: 0.8;
   background: linear-gradient(180deg, #2b87ff 0%, #1656a8 100%);
@@ -1444,6 +1442,7 @@ body .studio__card.visible {
   border-radius: 20px;
   background: #000;
   overflow: hidden;
+  margin-left: 4rem;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
 }
 
@@ -1758,6 +1757,9 @@ body .studio__card.visible {
   font-weight: 700;
   color: aliceblue;
 }
+.collections .cards-header {
+  margin-bottom: -2rem;
+}
 
 .collections-wrapper {
   position: relative;
@@ -1826,7 +1828,6 @@ body .studio__card.visible {
 .studio-nav {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   width: 52px;
   height: 52px;
   border-radius: 50%;
@@ -1841,6 +1842,14 @@ body .studio__card.visible {
 }
 .studio-nav.right {
   right: -25px;
+}
+
+.studio-nav.left {
+  left: 0;
+}
+
+.studio-nav.right {
+  right: 0;
 }
 
 @media (max-width: 1200px) {

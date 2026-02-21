@@ -237,3 +237,30 @@ footerCols.forEach(col => {
     col.classList.toggle('active');
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  document.querySelectorAll(".cards-slider").forEach(slider => {
+
+    const track = slider.querySelectorAll(".collections__grid")[1]; 
+    const left = slider.querySelector(".cards-nav--left");
+    const right = slider.querySelector(".cards-nav--right");
+
+    if(!track || !left || !right) return;
+
+    const card = track.querySelector(".card");
+    const scrollAmount = card.offsetWidth + 20;
+
+    function move(direction){
+      track.scrollBy({
+        left: direction * scrollAmount,
+        behavior: "smooth"
+      });
+    }
+
+    left.addEventListener("click", ()=> move(-1));
+    right.addEventListener("click", ()=> move(1));
+
+  });
+
+});

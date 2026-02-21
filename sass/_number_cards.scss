@@ -6,11 +6,10 @@
 }
 
 .top-title {
-  font-size: 48px;
+  font-size: 37px;
   font-weight: 800;
   color: #fff;
-  margin-bottom: 100px;
-  padding-left: 120px;
+  margin-bottom: 10px;
 
   span {
     color: #2f8cff;
@@ -20,9 +19,7 @@
 
 .top-row {
   display: flex;
-  align-items: center;
-  gap: 10px;             
-  padding-left: 160px;
+  align-items: center;             
   position: relative;
 }
 .top-item {
@@ -34,10 +31,9 @@
 
 .top-number {
   position: absolute;
-  left: -180px;           
+  left: -100px;           
   bottom: 19px; 
-  
-  font-size: 360px; 
+  font-size: 300px; 
   font-weight: 900;
   line-height: 0.8;
   
@@ -61,6 +57,7 @@
   border-radius: 20px;
   background: #000; 
   overflow: hidden;
+  margin-left: 4rem;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
 }
 
