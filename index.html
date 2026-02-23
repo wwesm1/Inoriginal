@@ -37,46 +37,46 @@
         </li>
       </ul>
       <nav class="mobile-bottom-nav">
-  <a href="#" class="mobile-item active">
-    <svg viewBox="0 0 24 24" fill="none">
-      <path d="M3 10L12 3L21 10V21H3V10Z" stroke="currentColor" stroke-width="2"/>
-    </svg>
-    <span>Главная</span>
-  </a>
+        <a href="#" class="mobile-item active">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M3 10L12 3L21 10V21H3V10Z" stroke="currentColor" stroke-width="2" />
+          </svg>
+          <span>Главная</span>
+        </a>
 
-  <a href="#" class="mobile-item">
-    <svg viewBox="0 0 24 24" fill="none">
-      <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
-      <path d="M10 9L15 12L10 15V9Z" fill="currentColor"/>
-    </svg>
-    <span>Фильмы</span>
-  </a>
+        <a href="#" class="mobile-item">
+          <svg viewBox="0 0 24 24" fill="none">
+            <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2" />
+            <path d="M10 9L15 12L10 15V9Z" fill="currentColor" />
+          </svg>
+          <span>Фильмы</span>
+        </a>
 
-  <a href="#" class="mobile-item">
-    <svg viewBox="0 0 24 24" fill="none">
-      <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
-      <path d="M8 4V20M16 4V20" stroke="currentColor" stroke-width="2"/>
-    </svg>
-    <span>Сериалы</span>
-  </a>
+        <a href="#" class="mobile-item">
+          <svg viewBox="0 0 24 24" fill="none">
+            <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2" />
+            <path d="M8 4V20M16 4V20" stroke="currentColor" stroke-width="2" />
+          </svg>
+          <span>Сериалы</span>
+        </a>
 
-  <a href="#" class="mobile-item">
-    <svg viewBox="0 0 24 24" fill="none">
-      <path d="M4 19C4 19 6 17 12 17C18 17 20 19 20 19V5C20 5 18 3 12 3C6 3 4 5 4 5V19Z"
-        stroke="currentColor" stroke-width="2"/>
-    </svg>
-    <span>Словарь</span>
-  </a>
+        <a href="#" class="mobile-item">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M4 19C4 19 6 17 12 17C18 17 20 19 20 19V5C20 5 18 3 12 3C6 3 4 5 4 5V19Z" stroke="currentColor"
+              stroke-width="2" />
+          </svg>
+          <span>Словарь</span>
+        </a>
 
-  <a href="#" class="mobile-item">
-    <svg viewBox="0 0 24 24" fill="none">
-      <circle cx="5" cy="12" r="2" fill="currentColor"/>
-      <circle cx="12" cy="12" r="2" fill="currentColor"/>
-      <circle cx="19" cy="12" r="2" fill="currentColor"/>
-    </svg>
-    <span>Еще</span>
-  </a>
-</nav>
+        <a href="#" class="mobile-item">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="5" cy="12" r="2" fill="currentColor" />
+            <circle cx="12" cy="12" r="2" fill="currentColor" />
+            <circle cx="19" cy="12" r="2" fill="currentColor" />
+          </svg>
+          <span>Еще</span>
+        </a>
+      </nav>
       <div class="items">
         <div class="nav_search">
           <button class="nav__search">
@@ -954,11 +954,11 @@
 
 
     <section class="top-section">
-      <h2 class="top-title">
+      <h2 class="top-title container">
         <span>ТОП-10</span> за месяц
       </h2>
 
-      <div class="top-row">
+      <div class="top-row container">
 
         <div class="top-item">
           <div class="top-number">1</div>
@@ -1547,21 +1547,17 @@
     <section class="collections">
 
 
-      <div class="cards-header">
+      <div class="cards-header container">
         <h2 class="cards-title">
           Коллекции
           <span class="cards-arrow">›</span>
         </h2>
       </div>
 
-
-      <div class="collections__grid">
-
-        <div class="collections-wrapper">
-          <!-- LEFT ARROW -->
-          <button class="studio-nav left">❮</button>
-
-          <!-- SCROLL CONTAINER -->
+      <div class="cards-slider container">
+        <button class="cards-nav cards-nav--left">‹</button>
+        <button class="cards-nav cards-nav--right">›</button>
+        <div class="collections__grid">
           <div class="collections__grid">
 
             <div class="card">
@@ -1668,10 +1664,8 @@
 
           </div>
 
-          <button class="studio-nav right">❯</button>
-
         </div>
-
+      </div>
     </section>
     </section>
     <section class="studios container">
@@ -1681,9 +1675,9 @@
           <span class="cards-arrow">›</span>
         </h2>
       </div>
-      <div class="studio-section">
-
-        <button class="studio-nav left">❮</button>
+      <div class="cards-slider">
+        <button class="cards-nav cards-nav--left">‹</button>
+        <button class="cards-nav cards-nav--right">›</button>
 
         <div class="studio-row">
 
@@ -1724,15 +1718,7 @@
 
         </div>
 
-        <button class="studio-nav right">❯</button>
-
       </div>
-
-
-
-
-
-
     </section>
     </button>
     </div>
@@ -1744,9 +1730,9 @@
           <span class="cards-arrow">›</span>
         </h2>
       </div>
-      <div class="studio-section">
-
-        <button class="studio-nav left">❮</button>
+      <div class="cards-slider">
+        <button class="cards-nav cards-nav--left">‹</button>
+        <button class="cards-nav cards-nav--right">›</button>
 
         <div class="studio-row">
 
@@ -1792,10 +1778,9 @@
 
         </div>
 
-        <button class="studio-nav right">❯</button>
 
       </div>
-
+    </section>
   </main>
 
   <footer class="footer">
@@ -1875,6 +1860,10 @@
     </div>
 
 </footer>
+
+
+  </footer>
+
   <script src="main.js"></script>
 
 </body>

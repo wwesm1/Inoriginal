@@ -251,7 +251,7 @@ body {
 
   .studio-row {
     display: flex;
-    gap: 24px;
+    gap: 40px;
     overflow-x: auto;
     scroll-behavior: smooth;
     padding: 20px;
@@ -351,6 +351,7 @@ body {
   width: 200px;
   height: 120px;
   overflow: hidden;
+  margin-left: -1rem;
   border-radius: 12px;
   background: #1a1a1a;
 
